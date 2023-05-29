@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icons/form-icon.png">
+    <title>Formulário Multi-step</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <aside>
+            <div>
+                <span>1</span>
+                <span>
+                    <p>Etapa 1</p>
+                    <p>Sua senha</p>
+                </span>
+            </div>
+            <div>
+                <span>2</span>
+                <span>
+                    <p>Etapa 2</p>
+                    <p>Selecione um plano</p>
+                </span>
+            </div>
+            <div>
+                <span>3</span>
+                <span>
+                    <p>Etapa 3</p>
+                    <p>Add-ons</p>
+                </span>
+            </div>
+            <div>
+                <span>4</span>
+                <span>
+                    <p>Etapa 4</p>
+                    <p>Sumário</p>
+                </span>
+            </div>
+        </aside>
+
+        <section>
+            <h1>Cadastro Pessoal</h1>
+            <h3>Por favor, cadastre uma senha.</h3>
+            <form>
+                <label for="text">
+                    <h4>Senha:</h4>
+                    <input type="password" name="password" id="password" required>
+                </label>
+                <ul>
+                    <li>Mínimo de 8 caracteres</li>
+                    <li>
+                        Deve conter os seguintes itens:
+                        <ul>
+                            <li>Letra maiúscula</li>
+                            <li>Letra minúscula</li>
+                            <li>Número</li>
+                            <li>Símbolo</li>
+                        </ul>
+                    </li>
+                </ul>
+                <input type="submit" value="Próxima Etapa">
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+
+</html>
