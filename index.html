@@ -7,35 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/output.css">
     <link rel="icon" href="./assets/icons/form-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Formulário Multi-step</title>
 </head>
 
-<body>
+<body class="bg-main-quaternaryColor font-primaryFont w-screen h-screen flex justify-center items-center">
     <header></header>
-    <main>
-        <aside>
-            <div>
+    <main class="bg-neutral-quinaryColor w-[900px] h-[515px] flex justify-between p-3">
+        <svg class="w-2/6 relative bg-main-secondaryColor">
+            <path d="M 0 250 C 150 300 50 450 250 450 L 250 500 L 0 500 Z" class="fill-main-tertiaryColor"></path>
+            <circle cx="0" cy="390" r="60" class="fill-neutral-quaternaryColor" />
+            <path d="M 350 450 C 250 250 225 375 150 425 C 75 470 50 500 100 500 L 300 500 Z"
+                class="fill-main-quinaryColor">
+            </path>
+        </svg>
+        <aside class="py-8 px-12 absolute">
+
+            <div class="flex items-center gap-4">
                 <span>1</span>
                 <span>
                     <p>Etapa 1</p>
                     <p>Sua senha</p>
                 </span>
             </div>
-            <div>
+            <div class="flex items-center gap-4">
                 <span>2</span>
                 <span>
                     <p>Etapa 2</p>
                     <p>Selecione um plano</p>
                 </span>
             </div>
-            <div>
+            <div class="flex items-center gap-4">
                 <span>3</span>
                 <span>
                     <p>Etapa 3</p>
                     <p>Add-ons</p>
                 </span>
             </div>
-            <div>
+            <div class="flex items-center gap-4">
                 <span>4</span>
                 <span>
                     <p>Etapa 4</p>
@@ -44,18 +55,18 @@
             </div>
         </aside>
 
-        <section>
+        <section class="">
             <h1>Cadastro Pessoal</h1>
             <h3>Por favor, cadastre uma senha.</h3>
             <form>
                 <label for="text">
                     <h4>Senha:</h4>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" minlength="8" required>
                 </label>
                 <ul>
                     <li>Mínimo de 8 caracteres</li>
                     <li>
-                        Deve conter os seguintes itens:
+                        Deve conter pelo menos um caracter para cada item a seguir:
                         <ul>
                             <li>Letra maiúscula</li>
                             <li>Letra minúscula</li>

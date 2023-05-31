@@ -4,7 +4,39 @@ module.exports = {
     './*.html'
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        main: {
+          //Marine blue
+          primaryColor: 'hsl(213, 96%, 18%)',
+          //Purplish blue
+          secondaryColor: '#483eff',
+          //Pastel blue
+          tertiaryColor: '#625aff',
+          //Light blue
+          quaternaryColor: '#eef5ff',
+          //Strawberry red
+          quinaryColor: '#f9818d',
+        },
+
+        neutral: {
+          //Cool gray
+          primaryColor: 'hsl(231, 11%, 63%)',
+          //Ligth gray
+          secondaryColor: 'hsl(229, 24%, 87%)',
+          //Magnolia
+          tertiaryColor: 'hsl(217, 100%, 97%)',
+          //Alabaster
+          quaternaryColor: '#ffaf7e',
+          //White
+          quinaryColor: 'hsl(0, 0%, 100%)',
+        }
+
+      },
+      fontFamily: {
+        primaryFont: ['Ubuntu', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 }

@@ -522,12 +522,103 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.absolute {
+  position: absolute;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
+.relative {
+  position: relative;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-\[515px\] {
+  height: 515px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
+}
+
+.w-\[900px\] {
+  width: 900px;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.bg-main-quaternaryColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 245 255 / var(--tw-bg-opacity));
+}
+
+.bg-main-secondaryColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(72 62 255 / var(--tw-bg-opacity));
+}
+
+.bg-neutral-quinaryColor {
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 0% 100% / var(--tw-bg-opacity));
+}
+
+.fill-main-quinaryColor {
+  fill: #f9818d;
+}
+
+.fill-main-tertiaryColor {
+  fill: #625aff;
+}
+
+.fill-neutral-quaternaryColor {
+  fill: #ffaf7e;
+}
+
+.fill-neutral-quinaryColor {
+  fill: hsl(0, 0%, 100%);
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.font-primaryFont {
+  font-family: Ubuntu, sans-serif;
 }
