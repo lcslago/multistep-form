@@ -15,67 +15,64 @@
 
 <body class="bg-main-quaternaryColor font-primaryFont w-screen h-screen flex justify-center items-center">
     <header></header>
-    <main class="bg-neutral-quinaryColor w-[900px] h-[515px] flex justify-between p-3">
-        <svg class="w-2/6 relative bg-main-secondaryColor">
-            <path d="M 0 250 C 150 300 50 450 250 450 L 250 500 L 0 500 Z" class="fill-main-tertiaryColor"></path>
-            <circle cx="0" cy="390" r="60" class="fill-neutral-quaternaryColor" />
-            <path d="M 350 450 C 250 250 225 375 150 425 C 75 470 50 500 100 500 L 300 500 Z"
-                class="fill-main-quinaryColor">
-            </path>
-        </svg>
-        <aside class="py-8 px-12 absolute">
+    <main class="bg-neutral-quinaryColor w-3/5 h-4/5 flex justify-between p-3 rounded-2xl shadow-2xl">
 
-            <div class="flex items-center gap-4">
-                <span>1</span>
+        <aside class="py-10 px-6 w-2/6 rounded-2xl"
+            style="background-image: url(./assets/img/bg-sidebar-desktop.svg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+
+            <div class="flex items-center gap-4 mb-6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">1</span>
                 <span>
-                    <p>Etapa 1</p>
-                    <p>Sua senha</p>
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 1</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
                 </span>
             </div>
-            <div class="flex items-center gap-4">
-                <span>2</span>
+            <div class="flex items-center gap-4 my-6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">2</span>
                 <span>
-                    <p>Etapa 2</p>
-                    <p>Selecione um plano</p>
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
                 </span>
             </div>
-            <div class="flex items-center gap-4">
-                <span>3</span>
+            <div class="flex items-center gap-4 my-6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">3</span>
                 <span>
-                    <p>Etapa 3</p>
-                    <p>Add-ons</p>
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
                 </span>
             </div>
-            <div class="flex items-center gap-4">
-                <span>4</span>
+            <div class="flex items-center gap-4 my-6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">4</span>
                 <span>
-                    <p>Etapa 4</p>
-                    <p>Sumário</p>
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
                 </span>
             </div>
+
         </aside>
 
-        <section class="">
-            <h1>Cadastro Pessoal</h1>
-            <h3>Por favor, cadastre uma senha.</h3>
-            <form>
-                <label for="text">
-                    <h4>Senha:</h4>
-                    <input type="password" name="password" id="password" minlength="8" required>
-                </label>
-                <ul>
-                    <li>Mínimo de 8 caracteres</li>
-                    <li>
-                        Deve conter pelo menos um caracter para cada item a seguir:
-                        <ul>
-                            <li>Letra maiúscula</li>
-                            <li>Letra minúscula</li>
-                            <li>Número</li>
-                            <li>Símbolo</li>
-                        </ul>
-                    </li>
+        <section class="flex flex-col pt-8 pr-16 gap-2 w-3/5">
+            <h1 class="text-4xl font-bold text-main-primaryColor">Cadastro Pessoal</h1>
+            <h3 class="text-neutral-primaryColor">Por favor, cadastre uma senha.</h3>
+            <form class="grid h-[480px]">
+                <fieldset class="mt-4">
+                    <span class="flex justify-between">
+                        <h4 class="text-sm text-main-primaryColor mb-1">Senha</h4>
+                        <p class="text-sm font-bold text-main-alertColor mb-1">Campo Obrigatório</p>
+                    </span>
+                    <input
+                        class="border-2 hover:border-main-primaryColor outline-main-primaryColor w-full h-3/6 rounded-lg"
+                        type="password" name="password" id="password" required>
+                </fieldset>
+                <ul class="text-main-hoverColor font-medium">
+                    <li class="before:content-['*'] before:text-main-alertColor"> Mínimo de 8 caracteres</li>
+                    <li class="before:content-['*'] before:text-main-alertColor"> Letras maiúsculas e minúsculas</li>
+                    <li class="before:content-['*'] before:text-main-alertColor"> Número (0-9)</li>
+                    <li class="before:content-['*'] before:text-main-alertColor"> Símbolo (!@#$%^&*)</li>
                 </ul>
-                <input type="submit" value="Próxima Etapa">
+                <input
+                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor cursor-pointer"
+                    type="submit" value="Próxima Etapa">
             </form>
         </section>
     </main>

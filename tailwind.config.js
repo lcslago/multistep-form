@@ -9,6 +9,8 @@ module.exports = {
         main: {
           //Marine blue
           primaryColor: 'hsl(213, 96%, 18%)',
+          //Light Marine blue
+          hoverColor: '#174a8a',
           //Purplish blue
           secondaryColor: '#483eff',
           //Pastel blue
@@ -17,6 +19,8 @@ module.exports = {
           quaternaryColor: '#eef5ff',
           //Strawberry red
           quinaryColor: '#f9818d',
+          //red
+          alertColor: 'hsl(354, 84%, 57%)',
         },
 
         neutral: {
