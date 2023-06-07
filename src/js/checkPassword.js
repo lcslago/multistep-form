@@ -1,3 +1,5 @@
+import { theme } from '../constants/projectTheme.js'
+
 const passwordCamp = document.querySelector('[data-password]');
 const showPassword = document.querySelector('[data-showpass]');
 
@@ -31,19 +33,19 @@ function validateRequirements(password) {
         { pattern: patternUppercase, requirement: uppercaseRequirement },
     ];
 
-    for (requirement of requirementList) {
+    for (const requirement of requirementList) {
         requirement.pattern.test(password) ? requirementCheck(requirement.requirement) : requirementUncheck(requirement.requirement);
     }
 }
 
 function requirementCheck(requirement) {
     requirement.style.textDecoration = "line-through";
-    requirement.style.color = "hsl(231, 11%, 63%)";
+    requirement.style.color = theme.colors.neutral.primaryColor;
 }
 
 function requirementUncheck(requirement) {
     requirement.style.textDecoration = "none";
-    requirement.style.color = "#174a8a";
+    requirement.style.color = theme.colors.main.hoverColor;
 }
 
 function resetPattern(pattern) {
