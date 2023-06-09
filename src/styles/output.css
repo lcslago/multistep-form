@@ -778,6 +778,42 @@ select {
   width: 100vw;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
+.w-1\/5 {
+  width: 20%;
+}
+
+.w-1\/6 {
+  width: 16.666667%;
+}
+
+.w-2\/4 {
+  width: 50%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-3\/6 {
+  width: 50%;
+}
+
+.w-4\/12 {
+  width: 33.333333%;
+}
+
+.w-4\/6 {
+  width: 66.666667%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -964,4 +1000,19 @@ select {
 .hover\:bg-main-hoverColor:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 74 138 / var(--tw-bg-opacity));
+}
+
+.group\/aside:hover .group-hover\/aside\:bg-main-quaternaryColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 245 255 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-main-quaternaryColor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(238 245 255 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:text-main-primaryColor {
+  --tw-text-opacity: 1;
+  color: hsl(213 96% 18% / var(--tw-text-opacity));
 }

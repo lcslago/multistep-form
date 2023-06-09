@@ -20,41 +20,44 @@
         <aside class="py-10 px-6 w-2/6 rounded-2xl"
             style="background-image: url(./public/assets/img/bg-sidebar-desktop.svg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
-            <div class="flex items-center gap-4 mb-6">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">1</span>
+            <a href="./index.html" class="flex items-center gap-4 mb-6 group w-4/6">
+                <span
+                    class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor">1</span>
                 <span>
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 1</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
                 </span>
-            </div>
-            <div class="flex items-center gap-4 my-6">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">2</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 my-6 group">
+                <span
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:bg-main-quaternaryColor">2</span>
                 <span>
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
                 </span>
-            </div>
-            <div class="flex items-center gap-4 my-6">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">3</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 my-6 group">
+                <span
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:bg-main-quaternaryColor">3</span>
                 <span>
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
                 </span>
-            </div>
-            <div class="flex items-center gap-4 my-6">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor">4</span>
+            </a>
+            <a href="#" class="flex items-center gap-4 my-6 group">
+                <span
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:bg-main-quaternaryColor">4</span>
                 <span>
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
                 </span>
-            </div>
-
+            </a>
         </aside>
 
         <section class="flex flex-col pt-8 pr-16 gap-2 w-3/5">
             <h1 class="text-4xl font-bold text-main-primaryColor">Cadastro Pessoal</h1>
             <h3 class="text-neutral-primaryColor">Por favor, cadastre uma senha.</h3>
-            <form class="grid h-[480px]">
+            <form class="grid h-[480px]" data-form>
                 <fieldset class="mt-4">
                     <span class="flex justify-between">
                         <h4 class="text-sm text-main-primaryColor mb-1">Senha</h4>

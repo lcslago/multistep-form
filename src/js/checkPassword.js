@@ -1,5 +1,7 @@
 import { theme } from '../constants/projectTheme.js'
 
+const passwordForm = document.querySelector('[data-form]');
+
 const passwordCamp = document.querySelector('[data-password]');
 const showPassword = document.querySelector('[data-showpass]');
 
@@ -11,6 +13,10 @@ passwordCamp.addEventListener('input', () => {
     passwordCamp.style.borderColor = theme.colors.neutral.primaryColor;
     checkPasssword(passwordCamp.value);
     validateRequirements(passwordCamp.value);
+})
+
+passwordForm.addEventListener('submit', e => {
+    e.preventDefault();
 })
 
 const uppercaseRequirement = document.querySelector('[data-uppercase]');
@@ -43,9 +49,8 @@ submitBtn.addEventListener('click', () => {
         lengthRequirement.style.backgroundColor = theme.colors.main.alertColor;
         lengthRequirement.style.borderRadius = "3px";
     } else {
-        requirementUncheck(lengthRequirement);
+        requirementCheck(lengthRequirement);
     }
-    console.log(passwordCamp.validity);
 })
 
 const passwordMeter = document.querySelector('[data-meter]');
