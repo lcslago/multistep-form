@@ -22,6 +22,10 @@ module.exports = {
           quinaryColor: '#f9818d',
           //red
           alertColor: 'hsl(354, 84%, 57%)',
+          //orange
+          mediumColor: '#E57C23',
+          //green
+          validatedColor: 'rgb(46, 144, 74)',
         },
 
         neutral: {

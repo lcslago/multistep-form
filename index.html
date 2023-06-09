@@ -58,27 +58,35 @@
                 <fieldset class="mt-4">
                     <span class="flex justify-between">
                         <h4 class="text-sm text-main-primaryColor mb-1">Senha</h4>
-                        <p class="text-sm font-bold text-main-alertColor mb-1">Campo Obrigatório</p>
+                        <p class="text-sm font-bold text-main-alertColor mb-1" data-alert></p>
                     </span>
                     <input
                         class="border-2 border-neutral-primaryColor hover:border-main-primaryColor outline-main-primaryColor w-full h-2/6 rounded-lg"
                         type="password" name="password" id="password" minlength="8" required data-password>
-                    <label class="flex items-center gap-2 w-1/2" for="show-password">
-                        <input class="w-4 h-4 my-4 border-2 rounded-full indeterminate: border-neutral-primaryColor"
-                            type="checkbox" name="show-password" id="show-password" data-showpass>
-                        <p class="text-sm font-medium text-main-hoverColor">Mostrar senha</p>
-                    </label>
+                    <div class="flex justify-between">
+                        <div class="border-4 mt-2 w-1/3" data-weak></div>
+                        <div class="border-4 mt-2 w-1/3" data-medium></div>
+                        <div class="border-4 mt-2 w-1/3" data-strong></div>
+                    </div>
+                    <div class="flex items-center justify-between h-1/5">
+                        <label class="flex items-center gap-2 w-1/2" for="show-password">
+                            <input class="w-4 h-4 my-4 border-2 rounded-full indeterminate: border-neutral-primaryColor"
+                                type="checkbox" name="show-password" id="show-password" data-showpass>
+                            <p class="text-sm font-medium text-main-hoverColor">Mostrar senha</p>
+                        </label>
+                        <p class="text-m text-main-alertColor font-bold" data-meter></p>
+                    </div>
                 </fieldset>
                 <ul class="text-main-hoverColor font-medium">
-                    <li data-length> Mínimo de 8 caracteres
+                    <li class="px-3" data-length> Mínimo de 8 caracteres
                     </li>
-                    <li data-uppercase> Letras maiúsculas e minúsculas</li>
-                    <li> Número (0-9)</li>
-                    <li> Símbolo (!@#$%^&*)</li>
+                    <li class="px-3" data-uppercase> Letras maiúsculas e minúsculas</li>
+                    <li class="px-3" data-numbers> Número (0-9)</li>
+                    <li class="px-3" data-symbols> Símbolo (!@#$%^&*)</li>
                 </ul>
                 <input
                     class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor cursor-pointer"
-                    type="submit" value="Próxima Etapa">
+                    type="submit" value="Próxima Etapa" data-submit>
             </form>
         </section>
     </main>
