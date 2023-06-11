@@ -44,9 +44,13 @@ module.exports = {
       },
       fontFamily: {
         primaryFont: ['Ubuntu', 'sans-serif']
+      },
+      backgroundImage: {
+        'desktop-img': "url('../../public/assets/img/bg-sidebar-desktop.svg')",
+        'mobile-img': "url('../../public/assets/img/bg-sidebar-mobile.svg')"
       }
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require('tailwindcss-animated')],
 }
 

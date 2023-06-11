@@ -42,12 +42,14 @@ passwordCamp.addEventListener('invalid', e => e.preventDefault());
 submitBtn.addEventListener('click', () => {
     if (passwordCamp.validity.valueMissing) {
         alertCamp.innerHTML = "Campo Obrigatório";
+        alertCamp.classList.toggle("animate-shake");
         passwordCamp.style.borderColor = theme.colors.main.alertColor;
     } else if (passwordCamp.validity.tooShort) {
         passwordCamp.style.borderColor = theme.colors.main.alertColor;
         lengthRequirement.style.color = theme.colors.neutral.quinaryColor;
         lengthRequirement.style.backgroundColor = theme.colors.main.alertColor;
         lengthRequirement.style.borderRadius = "3px";
+        lengthRequirement.classList.toggle("animate-shake");
     } else {
         requirementCheck(lengthRequirement);
     }
@@ -72,14 +74,14 @@ function checkPasssword(password) {
     } else if ((patternUppercase.test(password) && patternSymbol.test(password) && mediumPasswordPattern.test(password)) || (patternUppercase.test(password) && patternNumber.test(password) && mediumPasswordPattern.test(password)) || (patternNumber.test(password) && patternSymbol.test(password) && mediumPasswordPattern.test(password)) || (lowercasePasswordPattern.test(password) && patternNumber.test(password) && mediumPasswordPattern.test(password))) {
         passwordMeter.innerHTML = "Média";
         passwordMeter.style.color = theme.colors.main.mediumColor;
-        checkMeter(theme.colors.main.alertColor, theme.colors.main.mediumColor, theme.colors.neutral.primaryColor);
+        checkMeter(theme.colors.main.alertColor, theme.colors.main.mediumColor, theme.colors.neutral.secondaryColor);
     } else if (passwordCamp.value === "") {
         passwordMeter.innerHTML = "";
-        checkMeter(theme.colors.neutral.primaryColor, theme.colors.neutral.primaryColor, theme.colors.neutral.primaryColor);
+        checkMeter(theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor);
     } else {
         passwordMeter.innerHTML = "Fraca";
         passwordMeter.style.color = theme.colors.main.alertColor;
-        checkMeter(theme.colors.main.alertColor, theme.colors.neutral.primaryColor, theme.colors.neutral.primaryColor);
+        checkMeter(theme.colors.main.alertColor, theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor);
     }
     resetPattern();
 }
