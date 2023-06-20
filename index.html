@@ -16,13 +16,13 @@
 <body class="bg-main-quaternaryColor font-primaryFont w-screen h-screen flex justify-center items-center">
     <header></header>
     <main
-        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover self-start bg-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-4/5 xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
+        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-4/5 xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
 
         <aside
             class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
 
             <a href="./index.html"
-                class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
                 <span
                     class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor">1</span>
                 <span class="hidden xl:block">
@@ -30,25 +30,28 @@
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
                 </span>
             </a>
-            <a href="#" class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6">
+            <a href="#"
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
                 <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:transition-all group-hover:bg-main-quaternaryColor">2</span>
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all xl:group-hover:bg-main-quaternaryColor">2</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
                 </span>
             </a>
-            <a href="#" class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6">
+            <a href="#"
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
                 <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:transition-all  group-hover:bg-main-quaternaryColor">3</span>
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all  xl:group-hover:bg-main-quaternaryColor">3</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
                 </span>
             </a>
-            <a href="#" class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6">
+            <a href="#"
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
                 <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor group-hover:text-main-primaryColor group-hover:transition-all  group-hover:bg-main-quaternaryColor">4</span>
+                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all  xl:group-hover:bg-main-quaternaryColor">4</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
@@ -56,43 +59,49 @@
             </a>
         </aside>
 
-        <section class="flex flex-col pt-8 pr-16 gap-2 w-3/5 animate-fade-left">
-            <h1 class="text-4xl font-bold text-main-primaryColor">Cadastro Pessoal</h1>
-            <h3 class="text-neutral-primaryColor">Por favor, cadastre uma senha.</h3>
-            <form class="grid h-[480px]" data-form>
-                <fieldset class="mt-4">
-                    <span class="flex justify-between">
-                        <label for="password" class="text-sm text-main-primaryColor mb-1">Senha</label>
-                        <p class="text-sm font-bold text-main-alertColor mb-1" data-alert></p>
-                    </span>
-                    <input
-                        class="border-2 border-neutral-primaryColor hover:border-main-primaryColor transition-all outline-main-primaryColor w-full h-2/6 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-secondaryColor text-main-primaryColor text-  m"
-                        type="password" name="password" id="password" minlength="8" required data-password>
-                    <div class="flex justify-between">
-                        <div class="border-4 mt-2 w-1/3" data-weak></div>
-                        <div class="border-4 mt-2 w-1/3" data-medium></div>
-                        <div class="border-4 mt-2 w-1/3" data-strong></div>
-                    </div>
-                    <div class="flex items-center justify-between h-1/5">
-                        <div class="flex items-center gap-2 w-1/2" for="show-password">
-                            <input class="w-4 h-4 my-4 border-2 rounded-full indeterminate: border-neutral-primaryColor"
-                                type="checkbox" name="show-password" id="show-password" data-showpass>
-                            <label for="show-password" class="text-sm font-medium text-main-hoverColor">Mostrar
-                                senha</label>
-                        </div>
-                        <p class="text-m text-main-alertColor font-bold" data-meter></p>
-                    </div>
-                </fieldset>
-                <ul class="text-main-hoverColor font-medium">
-                    <li class="px-3" data-length> Mínimo de 8 caracteres
-                    </li>
-                    <li class="px-3" data-uppercase> Letras maiúsculas e minúsculas</li>
-                    <li class="px-3" data-numbers> Número (0-9)</li>
-                    <li class="px-3" data-symbols> Símbolo (!@#$%^&*)</li>
-                </ul>
-                <input
-                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor transition-all cursor-pointer"
-                    type="submit" value="Próxima Etapa" data-submit>
+        <section class="grid gap-y-40 w-10/12 m-auto xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
+            <div
+                class="bg-neutral-quinaryColor p-8 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
+                <div class="animate-fade-left">
+                    <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Cadastro Pessoal</h1>
+                    <h3 class="text-neutral-primaryColor">Por favor, cadastre uma senha.</h3>
+                    <form class="" data-form>
+                        <fieldset class="mt-4">
+                            <span class="flex justify-between">
+                                <label for="password" class="text-sm text-main-primaryColor mb-1">Senha</label>
+                                <p class="text-sm font-bold text-main-alertColor mb-1" data-alert></p>
+                            </span>
+                            <input
+                                class="border-2 border-neutral-primaryColor hover:border-main-primaryColor transition-all outline-main-primaryColor w-full h-2/6 rounded-lg focus:outline-none focus:ring-1 focus:ring-neutral-secondaryColor text-main-primaryColor text-  m"
+                                type="password" name="password" id="password" minlength="8" required data-password>
+                            <div class="flex justify-between">
+                                <div class="border-4 mt-2 w-1/3" data-weak></div>
+                                <div class="border-4 mt-2 w-1/3" data-medium></div>
+                                <div class="border-4 mt-2 w-1/3" data-strong></div>
+                            </div>
+                            <div class="flex items-center justify-between h-1/5">
+                                <div class="flex items-center gap-2 w-1/2" for="show-password">
+                                    <input
+                                        class="w-4 h-4 my-4 border-2 rounded-full indeterminate: border-neutral-primaryColor"
+                                        type="checkbox" name="show-password" id="show-password" data-showpass>
+                                    <label for="show-password" class="text-sm font-medium text-main-hoverColor">Mostrar
+                                        senha</label>
+                                </div>
+                                <p class="text-m text-main-alertColor font-bold" data-meter></p>
+                            </div>
+                        </fieldset>
+                        <ul class="text-main-hoverColor font-medium py-6">
+                            <li class="px-3" data-length> Mínimo de 8 caracteres
+                            </li>
+                            <li class="px-3" data-uppercase> Letras maiúsculas e minúsculas</li>
+                            <li class="px-3" data-numbers> Número (0-9)</li>
+                            <li class="px-3" data-symbols> Símbolo (!@#$%^&*)</li>
+                        </ul>
+                </div>
+            </div>
+            <input
+                class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor transition-all cursor-pointer"
+                type="submit" value="Próxima Etapa" data-submit>
             </form>
         </section>
     </main>
