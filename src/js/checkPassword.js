@@ -17,7 +17,20 @@ passwordCamp.addEventListener('input', () => {
 
 passwordForm.addEventListener('submit', e => {
     e.preventDefault();
+    if (passwordCamp !== "") {
+        document.cookie = `password=${passwordCamp.value}`;
+    }
 })
+window.onload = () => {
+    if (document.cookie !== "") {
+        passwordCamp.value = document.cookie.split("=")[1];
+    }
+
+    if (passwordCamp !== "") {
+        checkPasssword(passwordCamp.value);
+        validateRequirements(passwordCamp.value);
+    }
+}
 
 const uppercaseRequirement = document.querySelector('[data-uppercase]');
 const patternUppercase = new RegExp(/^(?=.*?[A-ZÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ])(?=.*?[a-záàâãéèêíïóôõöúçñ])/g);
