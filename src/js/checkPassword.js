@@ -18,7 +18,7 @@ passwordCamp.addEventListener('input', () => {
 passwordForm.addEventListener('submit', e => {
     e.preventDefault();
     if (passwordCamp !== "") {
-        document.cookie = `password=${passwordCamp.value}`;
+        document.cookie = `password=${passwordCamp.value}; ${setTimeOutCookie()}`;
     }
 })
 window.onload = () => {
@@ -30,6 +30,16 @@ window.onload = () => {
         checkPasssword(passwordCamp.value);
         validateRequirements(passwordCamp.value);
     }
+}
+
+function setTimeOutCookie() {
+    const date = new Date();
+    const timeLimit = 120 * 60000; //2 horas em ms
+
+    date.setTime(date.getTime() + timeLimit);
+    const expiredTime = `expires=${date.toUTCString()}`;
+
+    return expiredTime;
 }
 
 const uppercaseRequirement = document.querySelector('[data-uppercase]');
