@@ -1,12 +1,11 @@
 import { theme } from '../constants/projectTheme.js'
+const $ = document.querySelector.bind(document);
 
-const passwordForm = document.querySelector('[data-form]');
-
-const passwordCamp = document.querySelector('[data-password]');
-const showPassword = document.querySelector('[data-showpass]');
-
-const alertCamp = document.querySelector('[data-alert]');
-const submitBtn = document.querySelector('[data-submit]');
+const passwordForm = $('[data-form]');
+const passwordCamp = $('[data-password]');
+const showPassword = $('[data-showpass]');
+const alertCamp = $('[data-alert]');
+const submitBtn = $('[data-submit]');
 
 passwordCamp.addEventListener('input', () => {
     alertCamp.innerHTML = "";
@@ -42,16 +41,16 @@ function setTimeOutCookie() {
     return expiredTime;
 }
 
-const uppercaseRequirement = document.querySelector('[data-uppercase]');
+const uppercaseRequirement = $('[data-uppercase]');
 const patternUppercase = new RegExp(/^(?=.*?[A-ZÁÀÂÃÉÈÊÍÏÓÔÕÖÚÇÑ])(?=.*?[a-záàâãéèêíïóôõöúçñ])/g);
 
-const numberRequirement = document.querySelector('[data-numbers]');
+const numberRequirement = $('[data-numbers]');
 const patternNumber = new RegExp(/^(?=.*?[0-9])/g);
 
-const symbolRequirement = document.querySelector('[data-symbols]');
+const symbolRequirement = $('[data-symbols]');
 const patternSymbol = new RegExp(/^(?=.*?[^\w\s\d])/g);
 
-const lengthRequirement = document.querySelector('[data-length]');
+const lengthRequirement = $('[data-length]');
 const patternLength = new RegExp(/.{8,}$/g);
 
 const requirementList = [
@@ -78,11 +77,11 @@ submitBtn.addEventListener('click', () => {
     }
 })
 
-const passwordMeter = document.querySelector('[data-meter]');
+const passwordMeter = $('[data-meter]');
 
-const passwordMeterWeak = document.querySelector('[data-weak]');
-const passwordMeterMedium = document.querySelector('[data-medium]');
-const passwordMeterStrong = document.querySelector('[data-strong]');
+const passwordMeterWeak = $('[data-weak]');
+const passwordMeterMedium = $('[data-medium]');
+const passwordMeterStrong = $('[data-strong]');
 
 function checkPasssword(password) {
     const fullPasswordPattern = new RegExp(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s\d])/g);

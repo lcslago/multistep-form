@@ -21,37 +21,38 @@
         <aside
             class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
 
-            <a href="./index.html"
+            <a href="./index.html" data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
-                <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor">1</span>
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
+                    data-aside-numb>1</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 1</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
                 </span>
             </a>
-            <a href="#"
-                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
-                <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all xl:group-hover:bg-main-quaternaryColor">2</span>
+            <a data-aside-btn
+                class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6"
+                style="cursor: not-allowed;">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>2</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
                 </span>
             </a>
-            <a href="#"
+            <a data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
-                <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all  xl:group-hover:bg-main-quaternaryColor">3</span>
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>3</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
                 </span>
             </a>
-            <a href="#"
+            <a data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
-                <span
-                    class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor xl:group-hover:text-main-primaryColor xl:group-hover:transition-all  xl:group-hover:bg-main-quaternaryColor">4</span>
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>4</span>
                 <span class="hidden xl:block">
                     <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
                     <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
@@ -107,6 +108,7 @@
     </main>
     <footer></footer>
     <script src="./src/js/checkPassword.js" type="module"></script>
+    <script src="./src/js/controlAsideNavigation.js"></script>
 </body>
 
 </html>
