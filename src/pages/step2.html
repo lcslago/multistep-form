@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="icon" href="../../public/assets/icons/form-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Formulário Multi-step</title>
+</head>
+
+<body class="bg-main-quaternaryColor font-primaryFont w-screen h-screen flex justify-center items-center">
+    <header></header>
+    <main
+        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-4/5 xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
+
+        <aside
+            class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
+
+            <a href="./index.html" data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
+                    data-aside-numb>1</span>
+                <span class="hidden xl:block">
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 1</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
+                </span>
+            </a>
+            <a data-aside-btn
+                class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6"
+                style="cursor: not-allowed;">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>2</span>
+                <span class="hidden xl:block">
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
+                </span>
+            </a>
+            <a data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>3</span>
+                <span class="hidden xl:block">
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
+                </span>
+            </a>
+            <a data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>4</span>
+                <span class="hidden xl:block">
+                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
+                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
+                </span>
+            </a>
+        </aside>
+
+        <section class="grid gap-y-40 w-10/12 m-auto xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
+            <div
+                class="bg-neutral-quinaryColor p-8 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
+                <div class="animate-fade-left">
+                    <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Escolha um plano</h1>
+                    <h3 class="text-neutral-primaryColor">Você tem opções mensais e anuais.</h3>
+                    <form class="flex flex-col gap-2" data-form>
+                        <label for="arcade"
+                            class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-arcade-icon bg-no-repeat bg-center bg-left bg-origin-content">
+                            <div class="pt-3 pb-3 pl-14">
+                                <h3 class="font-bold text-main-primaryColor">Arcade</h3>
+                                <p class="text-sm font-medium text-neutral-primaryColor">R$43,00/mês</p>
+                            </div>
+                            <input type="checkbox" name="arcade" id="arcade" class="hidden">
+                        </label>
+                        <label for="advanced" class="p-8 mt-4 border-2 rounded-2xl">
+                            <input type="checkbox" name="advanced" id="advanced" class="hidden">
+                        </label>
+                        <label for="pro" class="p-8 mt-4 border-2 rounded-2xl">
+                            <input type="checkbox" name="pro" id="pro" class="hidden">
+                        </label>
+                </div>
+            </div>
+            <input
+                class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor transition-all cursor-pointer"
+                type="submit" value="Próxima Etapa" data-submit>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="./src/js/controlAsideNavigation.js"></script>
+</body>
+
+</html>

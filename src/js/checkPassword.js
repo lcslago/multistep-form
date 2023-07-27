@@ -18,6 +18,7 @@ passwordForm.addEventListener('submit', e => {
     e.preventDefault();
     if (passwordCamp !== "") {
         document.cookie = `password=${passwordCamp.value}; ${setTimeOutCookie()}`;
+        window.location.href = "./src/pages/step2.html";
     }
 })
 window.onload = () => {

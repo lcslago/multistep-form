@@ -11,7 +11,7 @@ const asideBtnHover = [
 ];
 
 asideBtn.forEach((element) => {
-    if (document.cookie != "") {
+    if (document.cookie != "") { //ESSA CONDICIONAL VAI TER QUE MUDAR PARA ALGO MAIS ABRANGENTE PARA TODO O FORMULARIO
         element.addEventListener("mouseover", () => {
             asideBtn.forEach((button, index) => {
                 button.style.cursor = "pointer";

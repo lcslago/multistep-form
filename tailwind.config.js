@@ -47,7 +47,10 @@ module.exports = {
       },
       backgroundImage: {
         'desktop-img': "url('../../public/assets/img/bg-sidebar-desktop.svg')",
-        'mobile-img': "url('../../public/assets/img/bg-sidebar-mobile.svg')"
+        'mobile-img': "url('../../public/assets/img/bg-sidebar-mobile.svg')",
+        'arcade-icon': "url('../../public/assets/icons/icon-arcade.svg')",
+        'advanced-icon': "url('../../public/assets/icons/icon-advanced.svg')",
+        'pro-icon': "url('../../public/assets/icons/icon-pro.svg')"
       }
     },
   },
