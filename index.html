@@ -13,7 +13,7 @@
     <title>Formulário Multi-step</title>
 </head>
 
-<body class="bg-main-quaternaryColor font-primaryFont w-screen h-screen flex justify-center items-center">
+<body class="bg-main-quaternaryColor font-primaryFont w-screen xl:h-screen flex justify-center items-center">
     <header></header>
     <main
         class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-4/5 xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
@@ -60,9 +60,9 @@
             </a>
         </aside>
 
-        <section class="grid gap-y-40 w-10/12 m-auto xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
+        <section class="grid gap-y-5 w-full xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
             <div
-                class="bg-neutral-quinaryColor p-8 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
+                class="bg-neutral-quinaryColor p-8 ml-6 mr-6 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
                 <div class="animate-fade-left">
                     <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Cadastro Pessoal</h1>
                     <h3 class="text-neutral-primaryColor">Por favor, cadastre uma senha de acesso.</h3>
@@ -100,9 +100,11 @@
                         </ul>
                 </div>
             </div>
-            <input
-                class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mb-4 hover:bg-main-hoverColor transition-all cursor-pointer"
-                type="submit" value="Próxima Etapa" data-submit>
+            <div class="flex flex-row-reverse w-full">
+                <input
+                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg mt-3 mb-3 mr-6 hover:bg-main-hoverColor transition-all cursor-pointer"
+                    type="submit" value="Próxima Etapa" data-submit>
+            </div>
             </form>
         </section>
     </main>

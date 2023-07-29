@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .radio-label:has(input:checked) {
+        @apply border-main-hoverColor bg-main-quaternaryColor;
+    }
+}
