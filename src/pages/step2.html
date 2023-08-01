@@ -25,38 +25,38 @@
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
                 <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
                     data-aside-numb>1</span>
-                <span class="hidden xl:block">
-                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 1</p>
-                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</p>
-                </span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 1<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</span>
+                </div>
             </a>
             <a data-aside-btn
                 class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6"
                 style="cursor: not-allowed;">
                 <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
                     data-aside-numb>2</span>
-                <span class="hidden xl:block">
-                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 2</p>
-                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</p>
-                </span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 2<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</span>
+                </div>
             </a>
             <a data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
                 <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
                     data-aside-numb>3</span>
-                <span class="hidden xl:block">
-                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 3</p>
-                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</p>
-                </span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 3<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Add-ons</span>
+                </div>
             </a>
             <a data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 my-6 group xl:w-4/6">
                 <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
                     data-aside-numb>4</span>
-                <span class="hidden xl:block">
-                    <p class="text-xs uppercase text-neutral-quinaryColor">Etapa 4</p>
-                    <p class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</p>
-                </span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 4<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</span>
+                </div>
             </a>
         </aside>
 
@@ -65,14 +65,14 @@
                 class="bg-neutral-quinaryColor p-8 ml-6 mr-6 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
                 <div class="animate-fade-left">
                     <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Escolha um plano</h1>
-                    <h3 class="text-neutral-primaryColor">Você tem opções mensais e anuais.</h3>
+                    <h2 class="text-neutral-primaryColor">Você tem opções mensais e anuais.</h2>
                     <form class="flex flex-col gap-2" data-form>
                         <a href="#">
                             <label for="arcade"
                                 class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-arcade-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
                                 <div class="pt-3 pb-3 pl-14">
                                     <h3 class="font-bold text-main-primaryColor">Arcade</h3>
-                                    <p class="text-sm font-medium text-neutral-primaryColor">R$30,00/mês</p>
+                                    <span class="text-sm font-medium text-neutral-primaryColor">R$30,00/mês</span>
                                 </div>
                                 <input type="radio" name="plan" id="arcade" class="hidden" checked>
                             </label>
@@ -82,7 +82,7 @@
                                 class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-advanced-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
                                 <div class="pt-3 pb-3 pl-14">
                                     <h3 class="font-bold text-main-primaryColor">Advanced</h3>
-                                    <p class="text-sm font-medium text-neutral-primaryColor">R$50,00/mês</p>
+                                    <span class="text-sm font-medium text-neutral-primaryColor">R$50,00/mês</span>
                                 </div>
                                 <input type="radio" name="plan" id="advanced" class="hidden">
                             </label>
@@ -92,11 +92,21 @@
                                 class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-pro-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
                                 <div class="pt-3 pb-3 pl-14">
                                     <h3 class="font-bold text-main-primaryColor">Pro</h3>
-                                    <p class="text-sm font-medium text-neutral-primaryColor">R$70,00/mês</p>
+                                    <span class="text-sm font-medium text-neutral-primaryColor">R$70,00/mês</span>
                                 </div>
                                 <input type="radio" name="plan" id="pro" class="hidden">
                             </label>
                         </a>
+
+                        <label for="slider"
+                            class="flex items-center justify-center mt-8 mb-8 ml-auto mr-auto w-3/6 checked-style">
+                            <span class="pr-6 font-medium text-main-hoverColor">Mensal</span>
+                            <input type="checkbox" name="" id="slider" class="hidden peer">
+                            <div
+                                class="relative w-11 h-6 pr-6 pl-5 bg-main-hoverColor rounded-full peer peer-focus:ring-4 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-neutral-quinaryColor after:rounded-full after:h-5 after:w-5 after:transition-all">
+                            </div>
+                            <span class="pl-6 font-medium text-neutral-primaryColor">Anual</span>
+                        </label>
                 </div>
             </div>
             <div class="flex flex-row-reverse justify-between w-full pr-6 pt-3 pb-3">

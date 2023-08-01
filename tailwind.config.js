@@ -54,6 +54,6 @@ module.exports = {
       }
     },
   },
-  plugins: [require("@tailwindcss/forms"), require('tailwindcss-animated')],
+  plugins: [require("@tailwindcss/forms"), require('tailwindcss-animated'), require('flowbite/plugin')],
 }
 

@@ -9,7 +9,7 @@ const submitBtn = $('[data-submit]');
 
 passwordCamp.addEventListener('input', () => {
     alertCamp.innerHTML = "";
-    passwordCamp.style.borderColor = theme.colors.neutral.primaryColor;
+    passwordCamp.style.borderColor = theme.colors.neutral.secondaryColor;
     checkPasssword(passwordCamp.value);
     validateRequirements(passwordCamp.value);
 })
