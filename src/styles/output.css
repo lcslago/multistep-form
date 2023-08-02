@@ -1542,6 +1542,16 @@ input:checked + .toggle-bg {
   animation: fade-left 1s both;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 @keyframes shake {
   0% {
     transform: translateX(0rem);
@@ -1562,6 +1572,36 @@ input:checked + .toggle-bg {
 
 .animate-shake {
   animation: shake .5s both;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fade {
+  animation: fade 1s both;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 .cursor-default {
@@ -2048,6 +2088,14 @@ input:checked + .toggle-bg {
   padding-top: 2rem;
 }
 
+.pr-2 {
+  padding-right: 0.5rem;
+}
+
+.pr-3 {
+  padding-right: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2124,6 +2172,11 @@ input:checked + .toggle-bg {
 .text-neutral-quinaryColor {
   --tw-text-opacity: 1;
   color: hsl(0 0% 100% / var(--tw-text-opacity));
+}
+
+.text-main-validatedColor {
+  --tw-text-opacity: 1;
+  color: rgb(46 144 74 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2220,6 +2273,10 @@ input:checked + .toggle-bg {
   transition-duration: 150ms;
 }
 
+.animate-duration-700 {
+  animation-duration: 700ms;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -2255,23 +2312,6 @@ input:checked + .toggle-bg {
   border-radius: 9999px;
 }
 
-.after\:border::after {
-  content: var(--tw-content);
-  border-width: 1px;
-}
-
-.after\:border-gray-300::after {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
-}
-
-.after\:bg-white::after {
-  content: var(--tw-content);
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .after\:bg-neutral-quinaryColor::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
@@ -2300,10 +2340,6 @@ input:checked + .toggle-bg {
   background-color: rgb(23 74 138 / var(--tw-bg-opacity));
 }
 
-.focus\:bg-transparent:focus {
-  background-color: transparent;
-}
-
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2315,19 +2351,14 @@ input:checked + .toggle-bg {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
-.focus\:ring-main-primaryColor:focus {
+.focus\:ring-main-hoverColor:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: hsl(213 96% 18% / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(23 74 138 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-neutral-secondaryColor:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: hsl(229 24% 87% / var(--tw-ring-opacity));
-}
-
-.focus\:ring-main-hoverColor:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(23 74 138 / var(--tw-ring-opacity));
 }
 
 .peer:checked ~ .peer-checked\:after\:translate-x-full::after {
@@ -2336,21 +2367,10 @@ input:checked + .toggle-bg {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.peer:checked ~ .peer-checked\:after\:border-white::after {
-  content: var(--tw-content);
-  --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity));
-}
-
 .peer:focus ~ .peer-focus\:ring-4 {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-}
-
-.peer:focus ~ .peer-focus\:ring-blue-300 {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(164 202 254 / var(--tw-ring-opacity));
 }
 
 @media (min-width: 1280px) {
