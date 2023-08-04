@@ -1,7 +1,7 @@
 const checkbox = document.querySelector('[data-checkbox]');
 const priceView = document.querySelectorAll('[data-price]');
-const monthlyPrices = ["9,00", "12,00", "15,00"];
-const yearlyPrices = ["90,00", "120,00", "150,00"];
+const monthlyPrices = ["9", "12", "15"];
+const yearlyPrices = ["90", "120", "150"];
 let monthTrial;
 
 window.addEventListener('pageshow', event => {
@@ -18,7 +18,7 @@ checkbox.addEventListener('click', () => {
 function showPrice(node, price, priceType, monthTrial) {
     node.innerHTML = `
                             <span class="text-sm font-medium text-neutral-primaryColor animate-fade">R$${price}/${priceType}</span>
-                            <span class="text-xs p-0 font-bold text-main-validatedColor animate-bounce animate-duration-700">${monthTrial}</span>
+                            <span class="text-xs p-0 font-bold text-main-validatedColor animate-fade">${monthTrial}</span>
                             `
 }
 

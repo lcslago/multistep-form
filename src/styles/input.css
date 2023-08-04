@@ -8,6 +8,6 @@
     }
 
     .checked-style:has(input:checked) {
-        @apply [&>span:nth-child(1)]:text-neutral-primaryColor [&>span:nth-child(4)]:text-main-hoverColor;
+        @apply [&>span:nth-child(1)]:text-neutral-primaryColor [&>span:nth-child(4)]:text-main-primaryColor;
     }
 }

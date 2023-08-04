@@ -67,57 +67,64 @@
                     <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Escolha um plano</h1>
                     <h2 class="text-neutral-primaryColor">Você tem opções mensais e anuais.</h2>
                     <form class="flex flex-col gap-2" data-form>
-                        <a href="#">
-                            <label for="arcade"
-                                class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-arcade-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
-                                <div class="pt-3 pb-3 pl-12">
-                                    <h3 class="font-bold text-main-primaryColor">Arcade</h3>
-                                    <div class="flex justify-between items-center pr-4" data-price>
+                        <div class="xl:flex">
+                            <button type="button" class="w-full mt-4">
+                                <label for="arcade"
+                                    class="flex flex-col pl-3 border-2 rounded-2xl bg-arcade-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
+                                    <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
+                                        <h3 class="font-bold text-main-primaryColor text-left">Arcade</h3>
+                                        <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
+                                            data-price>
+                                        </div>
                                     </div>
-                                </div>
-                                <input type="radio" name="plan" id="arcade" class="hidden" checked>
-                            </label>
-                        </a>
-                        <a href="#">
-                            <label for="advanced"
-                                class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-advanced-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
-                                <div class="pt-3 pb-3 pl-12">
-                                    <h3 class="font-bold text-main-primaryColor">Advanced</h3>
-                                    <div class="flex justify-between items-center pr-4" data-price>
+                                    <input type="radio" name="plan" id="arcade" class="hidden" checked>
+                                </label>
+                            </button>
+                            <button type="button" class="w-full mt-4">
+                                <label for="advanced"
+                                    class="flex flex-col pl-3 border-2 rounded-2xl bg-advanced-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
+                                    <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
+                                        <h3 class="font-bold text-main-primaryColor text-left">Advanced</h3>
+                                        <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
+                                            data-price>
+                                        </div>
                                     </div>
-                                </div>
-                                <input type="radio" name="plan" id="advanced" class="hidden">
-                            </label>
-                        </a>
-                        <a href="#">
-                            <label for="pro"
-                                class="flex flex-col pl-3 mt-4 border-2 rounded-2xl bg-pro-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label">
-                                <div class="pt-3 pb-3 pl-12">
-                                    <h3 class="font-bold text-main-primaryColor">Pro</h3>
-                                    <div class="flex justify-between items-center pr-4" data-price>
+                                    <input type="radio" name="plan" id="advanced" class="hidden">
+                                </label>
+                            </button>
+                            <button type="button" class="w-full mt-4">
+                                <label for="pro"
+                                    class="flex flex-col pl-3 border-2 rounded-2xl bg-pro-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
+                                    <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
+                                        <h3 class="font-bold text-main-primaryColor text-left">Pro</h3>
+                                        <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
+                                            data-price>
+                                        </div>
                                     </div>
+                                    <input type="radio" name="plan" id="pro" class="hidden">
+                                </label>
+                            </button>
+                        </div>
+                        <div class="pt-3 pb-3 mt-4 mb-4 w-full bg-main-quaternaryColor rounded-2xl">
+                            <label for="slider"
+                                class="flex items-center justify-center  ml-auto mr-auto w-3/6 checked-style xl:cursor-pointer">
+                                <span class="pr-6 font-medium text-main-primaryColor">Mensal</span>
+                                <input type="checkbox" name="" id="slider" class="hidden peer" data-checkbox>
+                                <div
+                                    class="relative w-11 h-6 pr-6 pl-5 bg-main-hoverColor rounded-full peer peer-focus:ring-4 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-neutral-quinaryColor after:rounded-full after:h-5 after:w-5 after:transition-all">
                                 </div>
-                                <input type="radio" name="plan" id="pro" class="hidden">
+                                <span class="pl-6 font-medium text-neutral-primaryColor">Anual</span>
                             </label>
-                        </a>
-
-                        <label for="slider"
-                            class="flex items-center justify-center mt-8 mb-8 ml-auto mr-auto w-3/6 checked-style">
-                            <span class="pr-6 font-medium text-main-hoverColor">Mensal</span>
-                            <input type="checkbox" name="" id="slider" class="hidden peer" data-checkbox>
-                            <div
-                                class="relative w-11 h-6 pr-6 pl-5 bg-main-hoverColor rounded-full peer peer-focus:ring-4 peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-neutral-quinaryColor after:rounded-full after:h-5 after:w-5 after:transition-all">
-                            </div>
-                            <span class="pl-6 font-medium text-neutral-primaryColor">Anual</span>
-                        </label>
+                        </div>
                 </div>
             </div>
-            <div class="flex flex-row-reverse justify-between w-full pr-6 pt-3 pb-3">
+            <div class="flex flex-row-reverse justify-between w-[90%] xl:w-full pl-6 pt-3 pb-3">
                 <input
                     class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg hover:bg-main-hoverColor transition-all cursor-pointer"
                     type="submit" value="Próxima Etapa" data-submit>
 
-                <button class="ml-9 text-neutral-primaryColor font-medium h-3/6 self-center"><a
+                <button type="button"
+                    class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor animate-fade xl:animate-fade-left xl:hover:text-main-primaryColor xl:transition-all"><a
                         href="./../../index.html">Voltar</a></button>
             </div>
             </form>
