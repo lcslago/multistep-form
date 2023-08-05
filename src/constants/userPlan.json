@@ -1,0 +1,12 @@
+{
+    "monthly": {
+        "Arcade": "9/mês",
+        "Advanced": "12/mês",
+        "Pro": "15/mês"
+    },
+    "yearly": {
+        "Arcade": "90/ano",
+        "Advanced": "120/ano",
+        "Pro": "150/ano"
+    }
+}
