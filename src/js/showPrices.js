@@ -1,7 +1,10 @@
+import userPlan from "../constants/userPlan.json" assert {type: "json"};
+const userPlanMonthly = userPlan.monthly;
+const userPlanYearly = userPlan.yearly;
+
 const checkbox = document.querySelector('[data-checkbox]');
 const priceView = document.querySelectorAll('[data-price]');
-const monthlyPrices = ["9", "12", "15"];
-const yearlyPrices = ["90", "120", "150"];
+const planName = document.querySelectorAll('[data-plan-name]');
 let monthTrial;
 
 window.addEventListener('pageshow', event => {
@@ -10,28 +13,28 @@ window.addEventListener('pageshow', event => {
         location.reload();
     }
 })
+checkbox.addEventListener('click', () => watchCheckbox());
 
-checkbox.addEventListener('click', () => {
-    watchCheckbox();
-})
-
-function showPrice(node, price, priceType, monthTrial) {
+function showPrice(node, price, monthTrial) {
     node.innerHTML = `
-                            <span class="text-sm font-medium text-neutral-primaryColor animate-fade">R$${price}/${priceType}</span>
+                            <span class="text-sm font-medium text-neutral-primaryColor animate-fade">R$${price}</span>
                             <span class="text-xs p-0 font-bold text-main-validatedColor animate-fade">${monthTrial}</span>
                             `
 }
 
+const monthlyPrices = () => Object.values(userPlanMonthly);
+const yearlyPrices = () => Object.values(userPlanYearly);
+
+planName.forEach((view, name) => view.innerHTML = Object.keys(userPlanMonthly)[name]);
+
 function watchCheckbox() {
     if (!checkbox.checked) {
         monthTrial = "";
-        priceView.forEach((view, price) => {
-            showPrice(view, monthlyPrices[price], "mês", monthTrial);
-        });
+        const monthlyPricesListed = monthlyPrices();
+        priceView.forEach((view, price) => showPrice(view, monthlyPricesListed[price], monthTrial));
     } else {
-        monthTrial = "2 meses grátis";
-        priceView.forEach((view, price) => {
-            showPrice(view, yearlyPrices[price], "ano", monthTrial);
-        });
+        monthTrial = userPlan.sale;
+        const yearlyPricesListed = yearlyPrices();
+        priceView.forEach((view, price) => showPrice(view, yearlyPricesListed[price], monthTrial));
     }
 }

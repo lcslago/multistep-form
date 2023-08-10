@@ -72,19 +72,22 @@
                                 <label for="arcade"
                                     class="flex flex-col pl-3 border-2 rounded-2xl bg-arcade-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
                                     <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
-                                        <h3 class="font-bold text-main-primaryColor text-left">Arcade</h3>
+                                        <h3 class="font-bold text-main-primaryColor text-left" data-plan-name>
+                                        </h3>
                                         <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
                                             data-price>
                                         </div>
                                     </div>
-                                    <input type="radio" name="plan" id="arcade" class="hidden" checked>
+                                    <input type="radio" name="plan" id="arcade" class="hidden" checked
+                                        data-plan="arcade">
                                 </label>
                             </button>
                             <button type="button" class="w-full mt-4">
                                 <label for="advanced"
                                     class="flex flex-col pl-3 border-2 rounded-2xl bg-advanced-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
                                     <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
-                                        <h3 class="font-bold text-main-primaryColor text-left">Advanced</h3>
+                                        <h3 class="font-bold text-main-primaryColor text-left" data-plan-name>
+                                        </h3>
                                         <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
                                             data-price>
                                         </div>
@@ -96,7 +99,7 @@
                                 <label for="pro"
                                     class="flex flex-col pl-3 border-2 rounded-2xl bg-pro-icon bg-no-repeat bg-center bg-left bg-origin-content radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition-all">
                                     <div class="pt-3 pb-3 pl-12 xl:pl-0 xl:pb-0">
-                                        <h3 class="font-bold text-main-primaryColor text-left">Pro</h3>
+                                        <h3 class="font-bold text-main-primaryColor text-left" data-plan-name></h3>
                                         <div class="flex justify-between items-center pr-4 w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4"
                                             data-price>
                                         </div>
@@ -132,7 +135,8 @@
     </main>
     <footer></footer>
     <script src="../js/controlAsideNavigation.js"></script>
-    <script src="../js/showPrices.js"></script>
+    <script src="../js/showPrices.js" type="module"></script>
+    <script src="../js/setLocalStorage.js"></script>
 </body>
 
 </html>
