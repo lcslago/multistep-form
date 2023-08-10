@@ -1,4 +1,9 @@
 /** @type {import('tailwindcss').Config} */
+import theme from './src/constants/projectColorScheme.json' assert {type: "json"};
+const mainColors = theme.main;
+const neutralColors = theme.neutral;
+const fonts = theme.fonts;
+
 module.exports = {
   content: [
     './*.html',
@@ -8,42 +13,28 @@ module.exports = {
     extend: {
       colors: {
         main: {
-          //Marine blue
-          primaryColor: 'hsl(213, 96%, 18%)',
-          //Light Marine blue
-          hoverColor: '#174a8a',
-          //Purplish blue
-          secondaryColor: '#483eff',
-          //Pastel blue
-          tertiaryColor: '#625aff',
-          //Light blue
-          quaternaryColor: '#eef5ff',
-          //Strawberry red
-          quinaryColor: '#f9818d',
-          //red
-          alertColor: 'hsl(354, 84%, 57%)',
-          //orange
-          mediumColor: '#E57C23',
-          //green
-          validatedColor: 'rgb(46, 144, 74)',
+          primaryColor: mainColors.primaryColor,
+          hoverColor: mainColors.hoverColor,
+          secondaryColor: mainColors.secondaryColor,
+          tertiaryColor: mainColors.tertiaryColor,
+          quaternaryColor: mainColors.quaternaryColor,
+          quinaryColor: mainColors.quinaryColor,
+          alertColor: mainColors.alertColor,
+          mediumColor: mainColors.mediumColor,
+          validatedColor: mainColors.validatedColor,
         },
 
         neutral: {
-          //Cool gray
-          primaryColor: 'hsl(231, 11%, 63%)',
-          //Ligth gray
-          secondaryColor: 'hsl(229, 24%, 87%)',
-          //Magnolia
-          tertiaryColor: 'hsl(217, 100%, 97%)',
-          //Alabaster
-          quaternaryColor: '#ffaf7e',
-          //White
-          quinaryColor: 'hsl(0, 0%, 100%)',
+          primaryColor: neutralColors.primaryColor,
+          secondaryColor: neutralColors.secondaryColor,
+          tertiaryColor: neutralColors.tertiaryColor,
+          quaternaryColor: neutralColors.quaternaryColor,
+          quinaryColor: neutralColors.quinaryColor,
         }
 
       },
       fontFamily: {
-        primaryFont: ['Ubuntu', 'sans-serif']
+        primaryFont: fonts.primaryFont
       },
       backgroundImage: {
         'desktop-img': "url('../../public/assets/img/bg-sidebar-desktop.svg')",
@@ -56,4 +47,3 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/forms"), require('tailwindcss-animated'), require('flowbite/plugin')],
 }
-

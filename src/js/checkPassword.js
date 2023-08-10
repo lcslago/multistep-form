@@ -1,4 +1,5 @@
-import { theme } from '../constants/projectTheme.js'
+import theme from '../constants/projectColorScheme.json' assert {type: "json"};
+
 const $ = document.querySelector.bind(document);
 
 const passwordForm = $('[data-form]');
@@ -9,7 +10,7 @@ const submitBtn = $('[data-submit]');
 
 passwordCamp.addEventListener('input', () => {
     alertCamp.innerHTML = "";
-    passwordCamp.style.borderColor = theme.colors.neutral.secondaryColor;
+    passwordCamp.style.borderColor = theme.neutral.secondaryColor;
     checkPasssword(passwordCamp.value);
     validateRequirements(passwordCamp.value);
 })
@@ -66,11 +67,11 @@ submitBtn.addEventListener('click', () => {
     if (passwordCamp.validity.valueMissing) {
         alertCamp.innerHTML = "Campo Obrigatório";
         alertCamp.classList.toggle("animate-shake");
-        passwordCamp.style.borderColor = theme.colors.main.alertColor;
+        passwordCamp.style.borderColor = theme.main.alertColor;
     } else if (passwordCamp.validity.tooShort) {
-        passwordCamp.style.borderColor = theme.colors.main.alertColor;
-        lengthRequirement.style.color = theme.colors.neutral.quinaryColor;
-        lengthRequirement.style.backgroundColor = theme.colors.main.alertColor;
+        passwordCamp.style.borderColor = theme.main.alertColor;
+        lengthRequirement.style.color = theme.neutral.quinaryColor;
+        lengthRequirement.style.backgroundColor = theme.main.alertColor;
         lengthRequirement.style.borderRadius = "3px";
         lengthRequirement.classList.toggle("animate-shake");
     } else {
@@ -92,19 +93,19 @@ function checkPasssword(password) {
 
     if (fullPasswordPattern.test(password) && strongPasswordPattern.test(password)) {
         passwordMeter.innerHTML = "Forte";
-        passwordMeter.style.color = theme.colors.main.validatedColor;
-        checkMeter(theme.colors.main.alertColor, theme.colors.main.mediumColor, theme.colors.main.validatedColor);
+        passwordMeter.style.color = theme.main.validatedColor;
+        checkMeter(theme.main.alertColor, theme.main.mediumColor, theme.main.validatedColor);
     } else if ((patternUppercase.test(password) && patternSymbol.test(password) && mediumPasswordPattern.test(password)) || (patternUppercase.test(password) && patternNumber.test(password) && mediumPasswordPattern.test(password)) || (patternNumber.test(password) && patternSymbol.test(password) && mediumPasswordPattern.test(password)) || (lowercasePasswordPattern.test(password) && patternNumber.test(password) && mediumPasswordPattern.test(password))) {
         passwordMeter.innerHTML = "Média";
-        passwordMeter.style.color = theme.colors.main.mediumColor;
-        checkMeter(theme.colors.main.alertColor, theme.colors.main.mediumColor, theme.colors.neutral.secondaryColor);
+        passwordMeter.style.color = theme.main.mediumColor;
+        checkMeter(theme.main.alertColor, theme.main.mediumColor, theme.neutral.secondaryColor);
     } else if (passwordCamp.value === "") {
         passwordMeter.innerHTML = "";
-        checkMeter(theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor);
+        checkMeter(theme.neutral.secondaryColor, theme.neutral.secondaryColor, theme.neutral.secondaryColor);
     } else {
         passwordMeter.innerHTML = "Fraca";
-        passwordMeter.style.color = theme.colors.main.alertColor;
-        checkMeter(theme.colors.main.alertColor, theme.colors.neutral.secondaryColor, theme.colors.neutral.secondaryColor);
+        passwordMeter.style.color = theme.main.alertColor;
+        checkMeter(theme.main.alertColor, theme.neutral.secondaryColor, theme.neutral.secondaryColor);
     }
     resetPattern();
 }
@@ -123,13 +124,13 @@ function validateRequirements(password) {
 
 function requirementCheck(requirement) {
     requirement.style.textDecoration = "line-through";
-    requirement.style.color = theme.colors.neutral.primaryColor;
+    requirement.style.color = theme.neutral.primaryColor;
 }
 
 function requirementUncheck(requirement) {
     requirement.style.textDecoration = "none";
-    requirement.style.color = theme.colors.main.hoverColor;
-    requirement.style.backgroundColor = theme.colors.neutral.quinaryColor;
+    requirement.style.color = theme.main.hoverColor;
+    requirement.style.backgroundColor = theme.neutral.quinaryColor;
 }
 
 function resetPattern() {

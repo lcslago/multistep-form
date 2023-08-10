@@ -1,0 +1,26 @@
+{
+    "main": {
+        "primaryColor": "hsl(213, 96%, 18%)",
+        "hoverColor": "#174a8a",
+        "secondaryColor": "#483eff",
+        "tertiaryColor": "#625aff",
+        "quaternaryColor": "#eef5ff",
+        "quinaryColor": "#f9818d",
+        "alertColor": "hsl(354,84%,57%)",
+        "mediumColor": "#E57C23",
+        "validatedColor": "rgb(46,144,74)"
+    },
+    "neutral": {
+        "primaryColor": "hsl(231,11%,63%)",
+        "secondaryColor": "hsl(229,24%,87%)",
+        "tertiaryColor": "hsl(217,100%,97%)",
+        "quaternaryColor": "#ffaf7e",
+        "quinaryColor": "hsl(0,0%,100%)"
+    },
+    "fonts": {
+        "primaryFont": [
+            "Ubuntu",
+            "sans-serif"
+        ]
+    }
+}
