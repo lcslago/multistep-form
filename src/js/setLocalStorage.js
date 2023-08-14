@@ -5,24 +5,32 @@ const planTypeName = document.querySelectorAll('[data-plan]');
 
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
-    setLocalStorage();
-    console.log(localStorage.length); //usar para fazer a lógica da navegação lateral
+    checkLocalStorage();
 })
 
-function setLocalStorage() {
-    let planType = planTypeChecked.watchCheckbox();
+function checkLocalStorage() {
     planTypeName.forEach(plan => {
         if (plan.checked) {
             let selectedPlan = plan.parentElement.querySelector('[data-plan-name]').innerHTML;
             let selectedPlanPrice = plan.parentElement.querySelector('[data-plan-price]').innerHTML;
 
-            if (planType == "monthly") {
-                localStorage.setItem("Plan", `${selectedPlan}(Mensal)`);
-                localStorage.setItem("Price", selectedPlanPrice);
-            } else {
-                localStorage.setItem("Plan", `${selectedPlan}(Anual)`);
-                localStorage.setItem("Price", selectedPlanPrice);
-            }
+            setLocalStorage(selectedPlan, selectedPlanPrice);
         }
     })
+}
+
+function setLocalStorage(plan, price) {
+    let planType = planTypeChecked.watchCheckbox();
+
+    if (planType == "monthly") {
+        window.localStorage.setItem("Plan", `${plan}(Mensal)`);
+        window.localStorage.setItem("Price", price);
+    } else {
+        window.localStorage.setItem("Plan", `${plan}(Anual)`);
+        window.localStorage.setItem("Price", price);
+    }
+}
+
+export const localStorage = {
+    checkLocalStorage
 }

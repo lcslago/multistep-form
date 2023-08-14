@@ -11,6 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Formulário Multi-step</title>
+    <script>
+        if (document.referrer === "") {
+            window.location.href = "../../index.html";
+        }
+    </script>
 </head>
 
 <body class="bg-main-quaternaryColor font-primaryFont w-screen xl:h-screen flex justify-center items-center">
@@ -23,17 +28,17 @@
 
             <a href="./../../index.html" data-aside-btn
                 class="flex w-[13%] items-center justify-center cursor-default xl:cursor-pointer xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
                     data-aside-numb>1</span>
                 <div class="hidden xl:block">
                     <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 1<br></span>
                     <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</span>
                 </div>
             </a>
-            <a data-aside-btn
+            <a href="./step2.html" data-aside-btn
                 class="flex w-[13%] items-center justify-center xl:justify-normal gap-4 my-6 group xl:w-4/6"
                 style="cursor: not-allowed;">
-                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
                     data-aside-numb>2</span>
                 <div class="hidden xl:block">
                     <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 2<br></span>
@@ -136,7 +141,7 @@
         </section>
     </main>
     <footer></footer>
-    <script src="../js/controlAsideNavigation.js"></script>
+    <script src="../js/controlAsideNavigation.js" type="module"></script>
     <script src="../js/showPrices.js" type="module"></script>
     <script src="../js/setLocalStorage.js" type="module"></script>
 </body>
