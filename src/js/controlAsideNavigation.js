@@ -11,11 +11,12 @@ const asideBtnHover = [
 
 asideBtn.forEach((btn) => {
     if (document.cookie != "") {
-        asideBtn.forEach((button, index) => {
-            button.style.cursor = "pointer";
-            asideNumbs.forEach(number => number.classList.add(...asideBtnHover));
-            button.title = `Ir para a etapa ${index + 1}`;
-
+        btn.addEventListener("mouseover", () => {
+            asideBtn.forEach((button, index) => {
+                button.style.cursor = "pointer";
+                asideNumbs.forEach(number => number.classList.add(...asideBtnHover));
+                button.title = `Ir para a etapa ${index + 1}`;
+            });
         })
     }
 
