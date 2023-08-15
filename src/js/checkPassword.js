@@ -18,14 +18,14 @@ passwordCamp.addEventListener('input', () => {
 passwordForm.addEventListener('submit', e => {
     e.preventDefault();
     if (passwordCamp !== "") {
-        document.cookie = `password=${passwordCamp.value}; ${setTimeOutCookie()}`;
+        document.cookie = `password=${passwordCamp.value}; ${setTimeOutCookie()}; secure; samesite=lax; HttpOnly`;
         window.location.href = "./src/pages/step2.html";
     }
 })
 window.onload = () => {
-    if (document.cookie !== "") {
-        passwordCamp.value = document.cookie.split("=")[1];
-    }
+    passwordCamp.addEventListener('click', () => {
+        passwordCamp.removeAttribute('readonly');
+    })
 
     if (passwordCamp !== "") {
         checkPasssword(passwordCamp.value);
