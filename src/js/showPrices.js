@@ -45,5 +45,5 @@ function watchCheckbox() {
 }
 
 export const planTypeChecked = {
-    watchCheckbox
+    watchCheckbox,
 };
