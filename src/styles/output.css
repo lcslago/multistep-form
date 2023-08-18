@@ -1411,6 +1411,22 @@ input[type="range"]::-ms-fill-lower {
   animation: shake .5s both;
 }
 
+@keyframes fade-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-right {
+  animation: fade-right 1s both;
+}
+
 .cursor-default {
   cursor: default;
 }
