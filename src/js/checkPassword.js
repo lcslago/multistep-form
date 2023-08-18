@@ -17,7 +17,7 @@ passwordCamp.addEventListener('input', () => {
 
 passwordForm.addEventListener('submit', e => {
     e.preventDefault();
-    if (passwordCamp !== "") {
+    if (passwordCamp !== "" && !passwordCamp.readOnly) {
         document.cookie = `password=${passwordCamp.value}; ${setTimeOutCookie()}; secure; samesite=lax; HttpOnly`;
         window.location.href = "./src/pages/step2.html";
     }
@@ -64,7 +64,7 @@ const requirementList = [
 
 passwordCamp.addEventListener('invalid', e => e.preventDefault());
 submitBtn.addEventListener('click', () => {
-    if (passwordCamp.validity.valueMissing) {
+    if (passwordCamp.validity.valueMissing || passwordCamp.readOnly) {
         alertCamp.innerHTML = "Campo Obrigatório";
         alertCamp.classList.toggle("animate-shake");
         passwordCamp.style.borderColor = theme.main.alertColor;
