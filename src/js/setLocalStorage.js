@@ -6,6 +6,7 @@ const planTypeName = document.querySelectorAll('[data-plan]');
 submitBtn.addEventListener('click', event => {
     event.preventDefault();
     checkLocalStorage();
+    window.location.href = "./../pages/step3.html";
 })
 
 function checkLocalStorage() {
