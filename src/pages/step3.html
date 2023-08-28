@@ -21,7 +21,7 @@
 <body class="bg-main-quaternaryColor font-primaryFont w-screen xl:h-screen flex justify-center items-center">
     <header></header>
     <main
-        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-4/5 xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
+        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-[90%] xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
 
         <aside
             class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
@@ -70,12 +70,12 @@
                 <div class="hidden" data-animate>
                     <h1 class="text-3xl font-bold items-center gap-4 text-main-primaryColor xl:text-4xl">Complementos
                     </h1>
-                    <h2 class="text-neutral-primaryColor">Esses complementos irão melhorar sua experiência de jogo</h2>
+                    <h2 class="text-neutral-primaryColor">Complementos irão melhorar sua experiência de jogo.</h2>
                     <form class="flex flex-col gap-2" data-form>
-                        <div class="xl:flex">
+                        <div class="xl:flex xl:flex-col">
                             <button type="button" class="w-full mt-4">
                                 <label for="online-service"
-                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition duration-100">
+                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:cursor-pointer xl:hover:border-main-hoverColor xl:pl-4 xl:pr-4 xl:pt-0 xl:pb-0 xl:justify-between xl:transition duration-100">
                                     <div class="flex gap-4">
                                         <input type="checkbox" name="plan" id="online-service"
                                             class="self-center w-5 h-5 rounded-md border-neutral-secondaryColor focus:ring-neutral-quinaryColor">
@@ -85,20 +85,22 @@
                                             </h3>
                                             <div
                                                 class="flex justify-between items-center w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4">
-                                                <span class="text-xs text-left text-neutral-primaryColor">Acesso a jogos
+                                                <span
+                                                    class="text-xs text-left text-neutral-primaryColor xl:text-sm">Acesso
+                                                    a jogos
                                                     multiplayer</span>
                                             </div>
                                         </div>
                                     </div>
                                     <span
-                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right"
+                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right xl:text-sm"
                                         data-addon-price>+R$1/mês
                                     </span>
                                 </label>
                             </button>
                             <button type="button" class="w-full mt-4">
                                 <label for="larger-storage"
-                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition duration-100">
+                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:cursor-pointer xl:hover:border-main-hoverColor xl:pl-4 xl:pr-4 xl:pt-0 xl:pb-0 xl:justify-between xl:transition duration-100 xl:whitespace-nowrap">
                                     <div class="flex gap-4">
                                         <input type="checkbox" name="plan" id="larger-storage"
                                             class="self-center w-5 h-5 rounded-md border-neutral-secondaryColor focus:ring-neutral-quinaryColor">
@@ -108,20 +110,21 @@
                                             </h3>
                                             <div
                                                 class="flex justify-between items-center w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4">
-                                                <span class="text-xs text-left text-neutral-primaryColor">1TB extra de
+                                                <span class="text-xs text-left text-neutral-primaryColor xl:text-sm">1TB
+                                                    extra de
                                                     espaço em nuvem</span>
                                             </div>
                                         </div>
                                     </div>
                                     <span
-                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right"
+                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right xl:text-sm"
                                         data-addon-price>+R$2/mês
                                     </span>
                                 </label>
                             </button>
                             <button type="button" class="w-full mt-4">
                                 <label for="custom-profile"
-                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:h-40 xl:flex-col-reverse xl:bg-left-top xl:pt-3 xl:w-[115px] xl:cursor-pointer xl:hover:border-main-hoverColor xl:transition duration-100">
+                                    class="flex justify-around gap-2 pt-1 pb-1 pl-4 pr-4 border-2 rounded-2xl radio-label xl:cursor-pointer xl:hover:border-main-hoverColor xl:pl-4 xl:pr-4 xl:pt-0 xl:pb-0 xl:justify-between xl:transition duration-100">
                                     <div class="flex gap-4">
                                         <input type="checkbox" name="plan" id="custom-profile"
                                             class="self-center w-5 h-5 rounded-md border-neutral-secondaryColor focus:ring-neutral-quinaryColor">
@@ -131,13 +134,14 @@
                                             </h3>
                                             <div
                                                 class="flex justify-between items-center w-full xl:flex-col xl:p-0 xl:text-left xl:items-start xl:pb-4">
-                                                <span class="text-xs text-left text-neutral-primaryColor">Tema
+                                                <span
+                                                    class="text-xs text-left text-neutral-primaryColor xl:text-sm">Tema
                                                     personalizado de perfil</span>
                                             </div>
                                         </div>
                                     </div>
                                     <span
-                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right"
+                                        class="text-xs p-0 font-medium text-main-hoverColor self-center justify-self-right xl:text-sm"
                                         data-addon-price>+R$2/mês
                                     </span>
                                 </label>
@@ -152,7 +156,7 @@
 
                 <button type="button"
                     class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor animate-fade xl:animate-fade-left"><a
-                        href="./../../index.html"
+                        href="./step2.html"
                         class="xl:hover:text-main-primaryColor xl:transition-all">Voltar</a></button>
             </div>
             </form>
