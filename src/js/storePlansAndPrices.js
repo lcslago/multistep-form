@@ -1,4 +1,4 @@
-import { planTypeChecked } from "./showPrices.js";
+import { planTypeChecked } from "./showPlanAndPrices.js";
 
 const submitBtn = document.querySelector('[data-submit]');
 const planTypeName = document.querySelectorAll('[data-plan]');
