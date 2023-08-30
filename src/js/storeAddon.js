@@ -3,6 +3,7 @@ const addonPrice = document.querySelectorAll('[data-addon-price]');
 const addonCheckbox = document.querySelectorAll('[data-addon-checkbox]');
 const submitBtn = document.querySelector('[data-submit]');
 
+window.addEventListener('pageshow', () => { saveState() });
 submitBtn.addEventListener('click', e => {
     e.preventDefault();
     checkAddons();
@@ -22,9 +23,26 @@ function checkAddons() {
                 .replace(/\\n/g, '')
                 .trim());
         }
+
+        if (Array.from(addonCheckbox).every(box => !box.checked)) {
+            localStorage.removeItem("Addons");
+        }
     }
 }
 
 function saveState() {
+    const localStorageAddonDB = localStorage.getItem("Addons");
 
+    if (localStorageAddonDB) {
+        addonName.forEach((item, index) => {
+            const addonNameIncluded = localStorageAddonDB
+                .includes(item
+                    .innerHTML
+                    .trim());
+
+            if (addonNameIncluded) {
+                addonCheckbox[index].checked = true;
+            }
+        })
+    }
 }
