@@ -67,7 +67,7 @@
         <section class="grid gap-y-10 w-full xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
             <div
                 class="bg-neutral-quinaryColor p-8 ml-6 mr-6 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
-                <div class="hidden" data-animate>
+                <div class="animate-fade animate-ease-linear">
                     <h1 class="text-3xl font-bold text-main-primaryColor xl:text-4xl">Escolha um plano</h1>
                     <h2 class="text-neutral-primaryColor">Você tem opções mensais e anuais.</h2>
                     <form class="flex flex-col gap-2" data-form>
@@ -131,15 +131,14 @@
                     type="submit" value="Próxima Etapa" data-submit>
 
                 <button type="button"
-                    class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor animate-fade xl:animate-fade-left"><a
-                        href="./../../index.html"
-                        class="xl:hover:text-main-primaryColor xl:transition-all">Voltar</a></button>
+                    class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor"><a
+                        href="./../../index.html" class="xl:hover:text-main-primaryColor xl:transition-all"
+                        data-back>Voltar</a></button>
             </div>
             </form>
         </section>
     </main>
     <footer></footer>
-    <script src="../js/setAnimation.js"></script>
     <script src="../js/saveStateForPlans.js" type="module"></script>
     <script src="../js/showPlanAndPrices.js" type="module"></script>
     <script src="../js/storePlansAndPrices.js" type="module"></script>
