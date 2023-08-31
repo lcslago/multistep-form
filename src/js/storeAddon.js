@@ -1,13 +1,13 @@
+import { checkButtons } from "./checkButtons.js";
+
 const addonName = document.querySelectorAll('[data-addon-name]');
 const addonPrice = document.querySelectorAll('[data-addon-price]');
 const addonCheckbox = document.querySelectorAll('[data-addon-checkbox]');
-const submitBtn = document.querySelector('[data-submit]');
 
 window.addEventListener('pageshow', () => { saveState() });
-submitBtn.addEventListener('click', e => {
-    e.preventDefault();
-    checkAddons();
-});
+const main = (() => {
+    checkButtons(4, checkAddons);
+})()
 
 function checkAddons() {
     const selectedAddons = [];

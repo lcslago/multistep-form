@@ -1,13 +1,11 @@
 import { planTypeChecked } from "./showPlanAndPrices.js";
+import { checkButtons } from "./checkButtons.js";
 
-const submitBtn = document.querySelector('[data-submit]');
 const planTypeName = document.querySelectorAll('[data-plan]');
 
-submitBtn.addEventListener('click', event => {
-    event.preventDefault();
-    checkLocalStorage();
-    window.location.href = "./../pages/step3.html";
-})
+const main = (() => {
+    checkButtons(3, checkLocalStorage);
+})()
 
 function checkLocalStorage() {
     planTypeName.forEach(plan => {
@@ -33,5 +31,5 @@ function setLocalStorage(plan, price) {
 }
 
 export const localStorage = {
-    checkLocalStorage
+    checkButtons,
 }

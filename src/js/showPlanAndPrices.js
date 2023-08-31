@@ -18,8 +18,8 @@ checkbox.addEventListener('click', () => watchCheckbox());
 
 function showPrice(node, price, monthTrial) {
     node.innerHTML = `
-                            <span class="text-sm font-medium text-neutral-primaryColor animate-fade" data-plan-price>R$${price}</span>
-                            <span class="text-xs p-0 font-bold text-main-validatedColor animate-fade">${monthTrial}</span>
+                            <span class="text-sm font-medium text-neutral-primaryColor" data-plan-price>R$${price}</span>
+                            <span class="text-xs p-0 font-bold text-main-validatedColor">${monthTrial}</span>
                             `
 }
 
