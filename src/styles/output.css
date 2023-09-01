@@ -1195,12 +1195,32 @@ input[type="range"]::-ms-fill-lower {
   margin-bottom: 0.25rem;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.mb-auto {
+  margin-bottom: auto;
 }
 
 .ml-6 {
@@ -1227,8 +1247,20 @@ input[type="range"]::-ms-fill-lower {
   margin-right: auto;
 }
 
+.mt-12 {
+  margin-top: 3rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-24 {
+  margin-top: 6rem;
+}
+
+.mt-32 {
+  margin-top: 8rem;
 }
 
 .mt-4 {
@@ -1239,28 +1271,12 @@ input[type="range"]::-ms-fill-lower {
   margin-top: 2rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
+.mt-auto {
+  margin-top: auto;
 }
 
-.mt-24 {
-  margin-top: 6rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
-}
-
-.mb-8 {
-  margin-bottom: 2rem;
+.mr-8 {
+  margin-right: 2rem;
 }
 
 .block {
@@ -1327,24 +1343,28 @@ input[type="range"]::-ms-fill-lower {
   height: 2.25rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-\[200px\] {
   height: 200px;
+}
+
+.h-\[480px\] {
+  height: 480px;
 }
 
 .h-auto {
   height: auto;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .h-full {
   height: 100%;
 }
 
-.h-96 {
-  height: 24rem;
+.h-screen {
+  height: 100vh;
 }
 
 .w-1 {
@@ -1623,6 +1643,10 @@ input[type="range"]::-ms-fill-lower {
   border-radius: 0.125rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -1866,6 +1890,10 @@ input[type="range"]::-ms-fill-lower {
   padding-right: 1.5rem;
 }
 
+.pt-0 {
+  padding-top: 0px;
+}
+
 .pt-1 {
   padding-top: 0.25rem;
 }
@@ -1878,6 +1906,10 @@ input[type="range"]::-ms-fill-lower {
   padding-top: 0.75rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1886,8 +1918,28 @@ input[type="range"]::-ms-fill-lower {
   padding-top: 2.25rem;
 }
 
-.pt-0 {
-  padding-top: 0px;
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pr-8 {
+  padding-right: 2rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.pl-7 {
+  padding-left: 1.75rem;
+}
+
+.pr-7 {
+  padding-right: 1.75rem;
 }
 
 .text-left {
@@ -1916,6 +1968,11 @@ input[type="range"]::-ms-fill-lower {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1968,12 +2025,21 @@ input[type="range"]::-ms-fill-lower {
   color: hsl(0 0% 100% / var(--tw-text-opacity));
 }
 
+.text-neutral-secondaryColor {
+  --tw-text-opacity: 1;
+  color: hsl(229 24% 87% / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
 
 .line-through {
   text-decoration-line: line-through;
+}
+
+.decoration-solid {
+  text-decoration-style: solid;
 }
 
 .shadow-2xl {
@@ -2048,6 +2114,10 @@ input[type="range"]::-ms-fill-lower {
   transition-duration: 75ms;
 }
 
+.animate-ease-linear {
+  animation-timing-function: linear;
+}
+
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -2101,6 +2171,10 @@ input[type="range"]::-ms-fill-lower {
   content: var(--tw-content);
 }
 
+.hover\:hidden:hover {
+  display: none;
+}
+
 .hover\:border-main-primaryColor:hover {
   --tw-border-opacity: 1;
   border-color: hsl(213 96% 18% / var(--tw-border-opacity));
@@ -2109,6 +2183,18 @@ input[type="range"]::-ms-fill-lower {
 .hover\:bg-main-hoverColor:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(23 74 138 / var(--tw-bg-opacity));
+}
+
+.hover\:underline:hover {
+  text-decoration-line: underline;
+}
+
+.hover\:decoration-solid:hover {
+  text-decoration-style: solid;
+}
+
+.hover\:decoration-dashed:hover {
+  text-decoration-style: dashed;
 }
 
 .focus\:outline-none:focus {
@@ -2166,28 +2252,12 @@ input[type="range"]::-ms-fill-lower {
     margin-top: 2rem;
   }
 
-  .xl\:mt-32 {
-    margin-top: 8rem;
+  .xl\:mr-8 {
+    margin-right: 2rem;
   }
 
-  .xl\:mt-24 {
-    margin-top: 6rem;
-  }
-
-  .xl\:mb-24 {
-    margin-bottom: 6rem;
-  }
-
-  .xl\:mb-12 {
-    margin-bottom: 3rem;
-  }
-
-  .xl\:mt-12 {
-    margin-top: 3rem;
-  }
-
-  .xl\:mb-8 {
-    margin-bottom: 2rem;
+  .xl\:mr-6 {
+    margin-right: 1.5rem;
   }
 
   .xl\:block {
@@ -2198,12 +2268,12 @@ input[type="range"]::-ms-fill-lower {
     display: flex;
   }
 
-  .xl\:h-4\/5 {
-    height: 80%;
-  }
-
   .xl\:h-40 {
     height: 10rem;
+  }
+
+  .xl\:h-\[90\%\] {
+    height: 90%;
   }
 
   .xl\:h-auto {
@@ -2212,34 +2282,6 @@ input[type="range"]::-ms-fill-lower {
 
   .xl\:h-screen {
     height: 100vh;
-  }
-
-  .xl\:h-full {
-    height: 100%;
-  }
-
-  .xl\:h-5\/6 {
-    height: 83.333333%;
-  }
-
-  .xl\:h-96 {
-    height: 24rem;
-  }
-
-  .xl\:h-\[90\%\] {
-    height: 90%;
-  }
-
-  .xl\:h-\[50px\] {
-    height: 50px;
-  }
-
-  .xl\:h-\[150px\] {
-    height: 150px;
-  }
-
-  .xl\:h-\[100px\] {
-    height: 100px;
   }
 
   .xl\:w-2\/6 {
@@ -2262,22 +2304,6 @@ input[type="range"]::-ms-fill-lower {
     width: 100%;
   }
 
-  @keyframes fade-left {
-    0% {
-      opacity: 0;
-      transform: translateX(2rem);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-  .xl\:animate-fade-left {
-    animation: fade-left 1s both;
-  }
-
   .xl\:cursor-pointer {
     cursor: pointer;
   }
@@ -2294,10 +2320,6 @@ input[type="range"]::-ms-fill-lower {
     flex-direction: column-reverse;
   }
 
-  .xl\:flex-nowrap {
-    flex-wrap: nowrap;
-  }
-
   .xl\:items-start {
     align-items: flex-start;
   }
@@ -2308,10 +2330,6 @@ input[type="range"]::-ms-fill-lower {
 
   .xl\:justify-between {
     justify-content: space-between;
-  }
-
-  .xl\:justify-evenly {
-    justify-content: space-evenly;
   }
 
   .xl\:gap-0 {
@@ -2397,8 +2415,20 @@ input[type="range"]::-ms-fill-lower {
     padding-left: 0px;
   }
 
+  .xl\:pl-4 {
+    padding-left: 1rem;
+  }
+
   .xl\:pr-16 {
     padding-right: 4rem;
+  }
+
+  .xl\:pr-4 {
+    padding-right: 1rem;
+  }
+
+  .xl\:pt-0 {
+    padding-top: 0px;
   }
 
   .xl\:pt-3 {
@@ -2409,20 +2439,20 @@ input[type="range"]::-ms-fill-lower {
     padding-top: 2rem;
   }
 
-  .xl\:pl-2 {
-    padding-left: 0.5rem;
+  .xl\:pl-6 {
+    padding-left: 1.5rem;
   }
 
-  .xl\:pl-4 {
-    padding-left: 1rem;
+  .xl\:pr-6 {
+    padding-right: 1.5rem;
   }
 
-  .xl\:pr-4 {
-    padding-right: 1rem;
+  .xl\:pr-3 {
+    padding-right: 0.75rem;
   }
 
-  .xl\:pt-0 {
-    padding-top: 0px;
+  .xl\:pr-8 {
+    padding-right: 2rem;
   }
 
   .xl\:text-left {

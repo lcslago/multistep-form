@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="icon" href="../../public/assets/icons/form-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Formulário Multi-step</title>
+    <script>
+        if (document.referrer === "") {
+            window.location.href = "../../index.html";
+        }
+    </script>
+</head>
+
+<body class="bg-main-quaternaryColor font-primaryFont w-screen xl:h-screen flex justify-center items-center">
+    <header></header>
+    <main
+        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-[90%] xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
+
+        <aside
+            class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
+
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>1</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 1<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>2</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 2<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>3</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 3<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Complementos</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
+                    data-aside-numb>4</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 4<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="grid gap-y-10 w-full xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
+            <div
+                class="bg-neutral-quinaryColor h-[480px] p-8 ml-6 mr-6 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
+                <div class="animate-fade">
+                    <h1 class="text-3xl font-bold items-center gap-4 text-main-primaryColor xl:text-4xl">Finalizando
+                    </h1>
+                    <h2 class="text-neutral-primaryColor">Verifique se está tudo OK antes de confirmar.</h2>
+                    <form class="flex flex-col gap-2 mt-4 xl:mt-8" data-form>
+                        <div class="bg-main-quaternaryColor rounded-xl h-auto xl:flex xl:flex-col">
+                            <div class="flex flex-col justify-between pl-3 pr-3 xl:pl-6 xl:pr-6">
+
+                                <div class="flex justify-between pt-3 pb-3">
+                                    <div class="flex flex-col self-start">
+                                        <span class="font-medium text-main-primaryColor" data-plan-name>plano
+                                            (mensal/anual)</span>
+                                        <a href="./step2.html"
+                                            class="text-neutral-primaryColor hover:underline decoration-solid">Trocar</a>
+                                    </div>
+                                    <div class="self-center">
+                                        <span class="font-bold text-main-primaryColor" data-plan-price>preço</span>
+                                    </div>
+                                </div>
+
+                                <hr class="border-neutral-secondaryColor" data-hr>
+
+                                <div class="flex justify-between items-center pt-3 pb-4">
+                                    <div class="flex flex-col gap-3">
+                                        <span class="text-neutral-primaryColor" data-addon-name>addon um</span>
+                                        <span class="text-neutral-primaryColor" data-addon-name>addon dois</span>
+                                        <span class="text-neutral-primaryColor" data-addon-name>addon tres</span>
+                                    </div>
+                                    <div class="flex flex-col gap-3">
+                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
+                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
+                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center pl-3 pr-3 pt-8 xl:pl-6 xl:pr-6">
+                            <span class="text-neutral-primaryColor" data-sum-title>Total(mês/ano)</span>
+                            <span class="font-bold text-xl text-main-hoverColor" data-sum-price>preço</span>
+                        </div>
+                </div>
+            </div>
+            <div class="flex flex-row-reverse justify-between w-[90%] xl:w-full pl-6 pt-3 pb-8">
+                <input
+                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg hover:bg-main-hoverColor transition-all cursor-pointer pr-7 pl-7 xl:mr-6"
+                    type="submit" value="Confirmar" data-submit>
+
+                <button type="button"
+                    class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor"><a
+                        href="./step3.html" class="xl:hover:text-main-primaryColor xl:transition-all"
+                        data-back>Voltar</a></button>
+            </div>
+            </form>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../js/storeAddon.js" type="module"></script>
+</body>
+
+</html>
