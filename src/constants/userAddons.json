@@ -1,0 +1,19 @@
+{
+    "addons": {
+        "Serviço online": [
+            "Acesso a jogos multiplayer",
+            "5/mês",
+            "50/ano"
+        ],
+        "Armazenamento": [
+            "1TB extra de espaço em nuvem",
+            "10/mês",
+            "100/ano"
+        ],
+        "Perfil único": [
+            "Tema personalizado de perfil",
+            "10/mês",
+            "100/ano"
+        ]
+    }
+}
