@@ -77,13 +77,13 @@
 
                                 <div class="flex justify-between pt-3 pb-3">
                                     <div class="flex flex-col self-start">
-                                        <span class="font-medium text-main-primaryColor" data-plan-name>plano
-                                            (mensal/anual)</span>
+                                        <span class="font-medium text-main-primaryColor" data-plan-name></span>
                                         <a href="./step2.html"
-                                            class="text-neutral-primaryColor hover:underline decoration-solid">Trocar</a>
+                                            class="text-neutral-primaryColor hover:underline decoration-solid"
+                                            title="Trocar de plano">Trocar</a>
                                     </div>
                                     <div class="self-center">
-                                        <span class="font-bold text-main-primaryColor" data-plan-price>preço</span>
+                                        <span class="font-bold text-main-primaryColor" data-plan-price></span>
                                     </div>
                                 </div>
 
@@ -91,39 +91,39 @@
 
                                 <div class="flex justify-between items-center pt-3 pb-4">
                                     <div class="flex flex-col gap-3">
-                                        <span class="text-neutral-primaryColor" data-addon-name>addon um</span>
-                                        <span class="text-neutral-primaryColor" data-addon-name>addon dois</span>
-                                        <span class="text-neutral-primaryColor" data-addon-name>addon tres</span>
+                                        <span class="text-neutral-primaryColor" data-addon-name></span>
+                                        <span class="text-neutral-primaryColor" data-addon-name></span>
+                                        <span class="text-neutral-primaryColor" data-addon-name></span>
                                     </div>
                                     <div class="flex flex-col gap-3">
-                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
-                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
-                                        <span class="text-main-primaryColor" data-addon-price>preço</span>
+                                        <span class="text-main-primaryColor" data-addon-price></span>
+                                        <span class="text-main-primaryColor" data-addon-price></span>
+                                        <span class="text-main-primaryColor" data-addon-price></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="flex justify-between items-center pl-3 pr-3 pt-8 xl:pl-6 xl:pr-6">
-                            <span class="text-neutral-primaryColor" data-sum-title>Total(mês/ano)</span>
-                            <span class="font-bold text-xl text-main-hoverColor" data-sum-price>preço</span>
+                            <span class="text-neutral-primaryColor" data-sum-title></span>
+                            <span class="font-bold text-xl text-main-tertiaryColor" data-sum-price></span>
                         </div>
                 </div>
             </div>
             <div class="flex flex-row-reverse justify-between w-[90%] xl:w-full pl-6 pt-3 pb-8">
                 <input
-                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg hover:bg-main-hoverColor transition-all cursor-pointer pr-7 pl-7 xl:mr-6"
-                    type="submit" value="Confirmar" data-submit>
+                    class="self-end justify-self-end bg-main-primaryColor text-neutral-quinaryColor p-3 rounded-lg hover:bg-main-hoverColor transition-all cursor-pointer pr-7 pl-7"
+                    type="submit" value="Confirmar" title="Confirmar envio de formulário" data-submit>
 
                 <button type="button"
                     class="self-end justify-self-end bg-main-quaternaryColor text-neutral-primaryColor font-medium p-3 rounded-lg transition-all cursor-default xl:bg-neutral-quinaryColor"><a
                         href="./step3.html" class="xl:hover:text-main-primaryColor xl:transition-all"
-                        data-back>Voltar</a></button>
+                        title="Voltar para a etapa anterior" data-back>Voltar</a></button>
             </div>
             </form>
         </section>
     </main>
     <footer></footer>
-    <script src="../js/storeAddon.js" type="module"></script>
+    <script src="../js/showSummary.js"></script>
 </body>
 
 </html>
