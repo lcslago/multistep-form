@@ -3,34 +3,21 @@ const $$ = document.querySelectorAll.bind(document);
 
 let planName = $('[data-plan-name]');
 let planPrice = $('[data-plan-price]');
-
 let addonName = $$('[data-addon-name]');
 let addonPrice = $$('[data-addon-price]');
-
 let sumTitle = $('[data-sum-title]');
 let sumPrice = $('[data-sum-price]');
-
 const confirmBtn = $('[data-submit]');
 
-const main = (() => {
-    calculateSum();
-})()
-
+const main = (() => { calculateSum() })()
 
 function showChosenPlan() {
-    const chosenPlan = localStorage.getItem("Plan").split("(")[0];
     const chosenPlanPrice = localStorage.getItem("Price");
     let planType;
 
-    if (localStorage.getItem("Plan").includes("(Mensal)")) {
-        planType = "Mensal";
-        planName.innerHTML = `${chosenPlan} (${planType})`;
-        sumTitle.innerHTML = `Total (por mês)`;
-    } else {
-        planType = "Anual"
-        planName.innerHTML = `${chosenPlan} (${planType})`;
-        sumTitle.innerHTML = `Total (por ano)`;
-    }
+    localStorage.getItem("Plan").includes("(Mensal)") ?
+        planType = choosePlanType("Mensal") :
+        planType = choosePlanType("Anual");
     planPrice.innerHTML = chosenPlanPrice;
 
     const priceNumber = Number(chosenPlanPrice.match(/\d+/g));
@@ -45,15 +32,12 @@ function showChosenAddons() {
         chosenAddons.forEach((addon, index) => {
             addonName[index].innerHTML = addon.name;
             addonPrice[index].innerHTML = addon.price;
-
             addonsPriceArr.push(Number(addon.price.match(/\d+/g)));
         });
     }
 
-    if (addonsPriceArr.length === 0) {
-        addonName[0].innerHTML = "Nenhum complemento selecionado"
-    }
-
+    (() => addonsPriceArr.length === 0 && (addonName[0]
+        .innerHTML = "Nenhum complemento selecionado"))();
     return addonsPriceArr;
 }
 
@@ -63,23 +47,24 @@ function calculateSum() {
 
     let addonPricesSum = () => {
         let sum;
-        if (addonData.length > 0) {
-            sum = addonData
-                .reduce((currentValue, nextValue) => currentValue + nextValue);
-        } else {
+        addonData.length > 0 ?
+            sum = addonData.reduce((a, b) => a + b) :
             sum = 0;
-        }
         return sum;
     }
 
     const totalPricesSum = addonPricesSum() + planData[0];
+    planData[1] === "Mensal" ?
+        sumPrice.innerHTML = `R$${totalPricesSum}/mês` :
+        sumPrice.innerHTML = `R$${totalPricesSum}/ano`;
+}
 
-
-    const monthly = planData[1] === "Mensal";
-
-    if (monthly) {
-        sumPrice.innerHTML = `R$${totalPricesSum}/mês`
-    } else {
-        sumPrice.innerHTML = `R$${totalPricesSum}/ano`
-    }
+function choosePlanType(type) {
+    const chosenPlan = localStorage.getItem("Plan").split("(")[0];
+    planType = type;
+    planName.innerHTML = `${chosenPlan} (${planType})`;
+    type === "Mensal" ?
+        sumTitle.innerHTML = `Total (por mês)` :
+        sumTitle.innerHTML = `Total (por ano)`;
+    return type;
 }
