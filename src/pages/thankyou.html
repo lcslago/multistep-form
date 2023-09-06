@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <link rel="icon" href="../../public/assets/icons/form-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Formulário Multi-step</title>
+    <script>
+        if (document.referrer === "") {
+            window.location.href = "../../index.html";
+        }
+    </script>
+</head>
+
+<body class="bg-main-quaternaryColor font-primaryFont w-screen xl:h-screen flex justify-center items-center">
+    <header></header>
+    <main
+        class="flex flex-col w-full h-1/4 bg-mobile-img bg-no-repeat bg-cover h-[200px] self-start bg-center xl:self-center xl:bg-none xl:bg-neutral-quinaryColor xl:w-3/5 xl:h-[90%] xl:flex-row xl:justify-between xl:p-3 xl:rounded-2xl xl:shadow-2xl">
+
+        <aside
+            class="flex justify-center xl:justify-normal w-screen xl:w-2/6 xl:block xl:py-10 xl:px-6 rounded-2xl xl:bg-desktop-img xl:bg-no-repeat xl:bg-cover xl:bg-center">
+
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 xl:mb-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>1</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 1<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sua senha</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>2</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 2<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Seu plano</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-neutral-quinaryColor"
+                    data-aside-numb>3</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 3<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Complementos</span>
+                </div>
+            </div>
+            <div data-aside-btn
+                class="flex w-[13%] items-center justify-center cursor-default xl:justify-normal gap-4 my-6 group xl:w-4/6">
+                <span class="border-2 rounded-full px-3 py-1 font-medium text-main-primaryColor bg-main-quaternaryColor"
+                    data-aside-numb>4</span>
+                <div class="hidden xl:block">
+                    <span class="text-xs uppercase text-neutral-quinaryColor">Etapa 4<br></span>
+                    <span class="text-sm uppercase text-neutral-quinaryColor font-medium">Sumário</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="grid gap-y-10 w-full xl:w-3/5 xl:m-0 xl:pt-8 xl:gap-0 xl:pr-16 xl:gap-2 xl:h-auto">
+            <div
+                class="bg-neutral-quinaryColor h-[480px] p-8 ml-6 mr-6 rounded-2xl shadow-xl xl:shadow-none xl:p-0 xl:mb-0 xl:h-auto xl:bg-transparent">
+                <div
+                    class="animate-fade animate-delay-500 flex flex-col-reverse bg-thankyou-icon bg-no-repeat bg-bottom w-full h-2/6">
+                </div>
+                <div
+                    class="animate-fade animate-delay-500 flex flex-col items-center justify-center gap-4 h-3/6 xl:h-2/6">
+                    <span class="text-3xl font-bold text-main-primaryColor mt-8 xl:text-4xl">Obrigado!</span>
+                    <p class="text-center text-neutral-primaryColor">Agradeço por testar essa demonstração! Espero que
+                        tenha gostado. Tenho outros projetos feitos para aprendizado ou por diversão no meu <a
+                            href="https://github.com/lcslago"
+                            class="text-main-hoverColor font-medium hover:underline decoration-solid"
+                            title="Visite meu repositório">Github</a>.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./nojs.html">
+    </noscript>
+</body>
+
+</html>
