@@ -1251,6 +1251,10 @@ input[type="range"]::-ms-fill-lower {
   margin-right: auto;
 }
 
+.mt-0 {
+  margin-top: 0px;
+}
+
 .mt-12 {
   margin-top: 3rem;
 }
@@ -1277,10 +1281,6 @@ input[type="range"]::-ms-fill-lower {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.mt-0 {
-  margin-top: 0px;
 }
 
 .block {
@@ -1327,6 +1327,14 @@ input[type="range"]::-ms-fill-lower {
   height: 33.333333%;
 }
 
+.h-3 {
+  height: 0.75rem;
+}
+
+.h-3\/6 {
+  height: 50%;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1371,22 +1379,6 @@ input[type="range"]::-ms-fill-lower {
   height: 100vh;
 }
 
-.h-3\/6 {
-  height: 50%;
-}
-
-.h-3 {
-  height: 0.75rem;
-}
-
-.h-4\/6 {
-  height: 66.666667%;
-}
-
-.h-5\/6 {
-  height: 83.333333%;
-}
-
 .w-1 {
   width: 0.25rem;
 }
@@ -1405,6 +1397,10 @@ input[type="range"]::-ms-fill-lower {
 
 .w-2 {
   width: 0.5rem;
+}
+
+.w-2\/6 {
+  width: 33.333333%;
 }
 
 .w-3 {
@@ -1785,6 +1781,10 @@ input[type="range"]::-ms-fill-lower {
   background-size: cover;
 }
 
+.bg-bottom {
+  background-position: bottom;
+}
+
 .bg-center {
   background-position: center;
 }
@@ -1799,10 +1799,6 @@ input[type="range"]::-ms-fill-lower {
 
 .bg-top {
   background-position: top;
-}
-
-.bg-bottom {
-  background-position: bottom;
 }
 
 .bg-no-repeat {
@@ -2046,6 +2042,11 @@ input[type="range"]::-ms-fill-lower {
   color: hsl(213 96% 18% / var(--tw-text-opacity));
 }
 
+.text-main-secondaryColor {
+  --tw-text-opacity: 1;
+  color: rgb(72 62 255 / var(--tw-text-opacity));
+}
+
 .text-main-tertiaryColor {
   --tw-text-opacity: 1;
   color: rgb(98 90 255 / var(--tw-text-opacity));
@@ -2069,11 +2070,6 @@ input[type="range"]::-ms-fill-lower {
 .text-neutral-secondaryColor {
   --tw-text-opacity: 1;
   color: hsl(229 24% 87% / var(--tw-text-opacity));
-}
-
-.text-main-secondaryColor {
-  --tw-text-opacity: 1;
-  color: rgb(72 62 255 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2294,16 +2290,16 @@ input[type="range"]::-ms-fill-lower {
     margin-top: 2rem;
   }
 
-  .xl\:mt-0 {
-    margin-top: 0px;
-  }
-
   .xl\:block {
     display: block;
   }
 
   .xl\:flex {
     display: flex;
+  }
+
+  .xl\:h-2\/6 {
+    height: 33.333333%;
   }
 
   .xl\:h-40 {
@@ -2320,14 +2316,6 @@ input[type="range"]::-ms-fill-lower {
 
   .xl\:h-screen {
     height: 100vh;
-  }
-
-  .xl\:h-4\/6 {
-    height: 66.666667%;
-  }
-
-  .xl\:h-2\/6 {
-    height: 33.333333%;
   }
 
   .xl\:w-2\/6 {
