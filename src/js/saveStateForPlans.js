@@ -5,14 +5,13 @@ const userPricesYearly = Object.values(userPlan.yearly);
 const checkbox = document.querySelector('[data-checkbox]');
 const planTypeName = document.querySelectorAll('[data-plan]');
 
-const monthlyPlan = localStorage.getItem("Plan");
-const planPrice = localStorage.getItem("Price");
+const monthlyPlan = sessionStorage.getItem("Plan");
+const planPrice = sessionStorage.getItem("Price");
 
 window.addEventListener('pageshow', () => {
-    if (localStorage.length == 0) {
-        planTypeName[0].checked = true;
-    }
-    saveState();
+    planPrice === null && monthlyPlan === null ?
+        planTypeName[0].checked = true :
+        saveState();
 })
 
 function saveState() {

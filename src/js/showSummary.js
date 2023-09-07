@@ -7,15 +7,14 @@ let addonName = $$('[data-addon-name]');
 let addonPrice = $$('[data-addon-price]');
 let sumTitle = $('[data-sum-title]');
 let sumPrice = $('[data-sum-price]');
-const confirmBtn = $('[data-submit]');
 
 const main = (() => { calculateSum() })()
 
 function showChosenPlan() {
-    const chosenPlanPrice = localStorage.getItem("Price");
+    const chosenPlanPrice = sessionStorage.getItem("Price");
     let planType;
 
-    localStorage.getItem("Plan").includes("(Mensal)") ?
+    sessionStorage.getItem("Plan").includes("(Mensal)") ?
         planType = choosePlanType("Mensal") :
         planType = choosePlanType("Anual");
     planPrice.innerHTML = chosenPlanPrice;
@@ -25,7 +24,7 @@ function showChosenPlan() {
 }
 
 function showChosenAddons() {
-    const chosenAddons = JSON.parse(localStorage.getItem("Addons"));
+    const chosenAddons = JSON.parse(sessionStorage.getItem("Addons"));
     const addonsPriceArr = [];
 
     if (chosenAddons != null) {
@@ -60,7 +59,7 @@ function calculateSum() {
 }
 
 function choosePlanType(type) {
-    const chosenPlan = localStorage.getItem("Plan").split("(")[0];
+    const chosenPlan = sessionStorage.getItem("Plan").split("(")[0];
     planType = type;
     planName.innerHTML = `${chosenPlan} (${planType})`;
     type === "Mensal" ?

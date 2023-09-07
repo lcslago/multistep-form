@@ -4,32 +4,32 @@ import { checkButtons } from "./checkButtons.js";
 const planTypeName = document.querySelectorAll('[data-plan]');
 
 const main = (() => {
-    checkButtons(3, checkLocalStorage);
+    checkButtons(3, checksessionStorage);
 })()
 
-function checkLocalStorage() {
+function checksessionStorage() {
     planTypeName.forEach(plan => {
         if (plan.checked) {
             let selectedPlan = plan.parentElement.querySelector('[data-plan-name]').innerHTML;
             let selectedPlanPrice = plan.parentElement.querySelector('[data-plan-price]').innerHTML;
 
-            setLocalStorage(selectedPlan, selectedPlanPrice);
+            setsessionStorage(selectedPlan, selectedPlanPrice);
         }
     })
 }
 
-function setLocalStorage(plan, price) {
+function setsessionStorage(plan, price) {
     let planType = planTypeChecked.watchCheckbox();
 
     if (planType == "monthly") {
-        window.localStorage.setItem("Plan", `${plan}(Mensal)`);
-        window.localStorage.setItem("Price", price);
+        window.sessionStorage.setItem("Plan", `${plan}(Mensal)`);
+        window.sessionStorage.setItem("Price", price);
     } else {
-        window.localStorage.setItem("Plan", `${plan}(Anual)`);
-        window.localStorage.setItem("Price", price);
+        window.sessionStorage.setItem("Plan", `${plan}(Anual)`);
+        window.sessionStorage.setItem("Price", price);
     }
 }
 
-export const localStorage = {
+export const sessionStorage = {
     checkButtons,
 }

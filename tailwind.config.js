@@ -41,7 +41,8 @@ module.exports = {
         'mobile-img': "url('../../public/assets/img/bg-sidebar-mobile.svg')",
         'arcade-icon': "url('../../public/assets/icons/icon-arcade.svg')",
         'advanced-icon': "url('../../public/assets/icons/icon-advanced.svg')",
-        'pro-icon': "url('../../public/assets/icons/icon-pro.svg')"
+        'pro-icon': "url('../../public/assets/icons/icon-pro.svg')",
+        'thankyou-icon': "url('../../public/assets/icons/icon-thank-you.svg')"
       }
     },
   },

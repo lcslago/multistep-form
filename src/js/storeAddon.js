@@ -18,24 +18,24 @@ function checkAddons() {
                 price: addonPrice[i].innerHTML
             })
 
-            localStorage.setItem("Addons", JSON
+            sessionStorage.setItem("Addons", JSON
                 .stringify(selectedAddons)
                 .replace(/\\n/g, '')
                 .trim());
         }
 
         if (Array.from(addonCheckbox).every(box => !box.checked)) {
-            localStorage.removeItem("Addons");
+            sessionStorage.removeItem("Addons");
         }
     }
 }
 
 function saveState() {
-    const localStorageAddonDB = localStorage.getItem("Addons");
+    const sessionStorageAddonDB = sessionStorage.getItem("Addons");
 
-    if (localStorageAddonDB) {
+    if (sessionStorageAddonDB) {
         addonName.forEach((item, index) => {
-            const addonNameIncluded = localStorageAddonDB
+            const addonNameIncluded = sessionStorageAddonDB
                 .includes(item
                     .innerHTML
                     .trim());

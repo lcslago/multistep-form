@@ -17,7 +17,7 @@ function showAddons() {
     addonDescription.forEach((descr, i) => descr
         .innerHTML = [...addonData][i][0]);
 
-    localStorage.getItem("Plan").includes("Mensal") ?
+    sessionStorage.getItem("Plan").includes("Mensal") ?
         showPrices(1) :
         showPrices(2)
 }
